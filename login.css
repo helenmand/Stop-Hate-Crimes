@@ -5,9 +5,8 @@
 	margin: 200px auto;
 }
 
-.positionButton{
+.positionIn2Col{
 	text-align: center;
-	
 }
 
 .loginButton{
@@ -17,3 +16,9 @@
 	width: 110px;
 }
 
+.warningLabel{
+	text-align: center;
+	font-size: 10px;
+	color: red;
+	
+}
