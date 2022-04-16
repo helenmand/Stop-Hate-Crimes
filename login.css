@@ -1,0 +1,19 @@
+
+.positionborder {
+	border: 10px;
+	width: 330px;
+	margin: 200px auto;
+}
+
+.positionButton{
+	text-align: center;
+	
+}
+
+.loginButton{
+	margin-top:10px;
+	font-size: 15px;
+	height: 40px;
+	width: 110px;
+}
+
