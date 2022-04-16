@@ -8,19 +8,20 @@
 <title>Login</title>
 
 <link rel="stylesheet" href="login.css"/>
+<script src="login.js"></script>
 
 </head>
 <body>
 
-<form class="positionborder" action="???.html" method="post"> 
-<table>
+
+<table class="positionborder">
 <tr><td><label for="usname">User's name</label></td><td><input type="text" id="usname" name="username"></br></td></tr>
 <tr><td><label for="psword">Password</label></td><td><input type="password" id="psword" name="password"></br></td></tr>
-
-<tr><td class="positionButton" colspan="2"><input class="loginButton"type="submit" action="file.html" value="Log in"></td></tr>
+<tr><td class="positionIn2Col" colspan="2"><label class="warningLabel" id="warningOutput"></label></td></tr>
+<tr><td class="positionIn2Col" colspan="2"><input class="loginButton" type="submit" onclick="checkinput()" value="Log in"></td></tr>
 
 </table>
-</form>
+
 
 
 </body>
