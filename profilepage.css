@@ -4,6 +4,8 @@
   
   body {
     font-family: Helvetica;
+    background-color: #f2ebe5;
+    padding: 10px 200px;
   }
   
   img {
@@ -43,9 +45,10 @@
   #profile-pic {
     width: 180px;
     height: 180px;
-    border-radius: 3px;
+    border-radius: 90px;
     margin-top: 28px;
     overflow: hidden;
+    box-shadow: 0 0 0 5px #fff
   }
   
   #profile-pic img {
@@ -60,5 +63,6 @@
     color: rgb(255, 255, 255);
     font-size: 36px;
     font-weight: bold;
+    text-shadow: 2px 2px #000
   }
 
