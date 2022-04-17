@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.post {
+    background-color: #f2ebe5;
+    border-color: #647295;
+    border-style: solid;
+    width: 800px;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+}
+
+.user {
+    padding-bottom: 5px;
+    font-size: smaller;
+    font-style: italic;
+}
+
+.title {
+    font-size: larger;
+    border-style: solid;
+    border-color: #647295;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+}
+
+.body {
+    padding-top: 20px;
+    padding-bottom: 20px  
+}
+
+.bigassbutton {
+    vertical-align: bottom;
+}
