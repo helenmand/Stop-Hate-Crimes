@@ -1,0 +1,49 @@
+body{
+	background-color: #647295 ;
+}
+
+
+.positionAdminName {
+	border: 10px;
+	width: 330px;
+	margin: 100px auto auto auto;
+	text-align: center;
+	
+}
+
+.landingPageButton {
+	margin-top: 1%;
+	margin-right: 10%;
+	float: right;
+	font-size: 15px;
+	height: 50px;
+	width: 100px;
+	display: inline;
+	max-width: 500px;
+}
+
+.Users {
+	float: left; 
+	margin-left: 5%;
+	margin-top: 40px;
+	display: inline;
+}
+
+
+.Tag {
+ 	margin-top: 60px;
+	margin-left: 5%;
+	border: 5px solid blue;
+	width: 450px;
+	height: 400px;
+	text-align: center;
+}
+.AddButton {
+	margin-top: 130px;
+	margin-left:437px;
+	position: absolute;
+	
+	font-size: 15px;
+	height: 40px;
+	width: 90px;
+}
