@@ -6,17 +6,18 @@
 
 html,
 body {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  place-items: center;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    place-items: center;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
 }
 
 .wrapper {
-  display: inline-flex;
-  list-style: none;
+    display: inline-flex;
+    list-style: none;
+    margin-bottom: 0.5em;
 }
 
 .bn1 {
@@ -42,7 +43,7 @@ a.bn1:hover {
 
 
 .text, .p{
-    border: 2px solid rebeccapurple;
+    border: 2px solid #647295;
     padding: .5em;
     text-align: center;
 }
