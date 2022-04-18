@@ -10,6 +10,15 @@ function checkinput()
 	
 	else
 	{
-		window.location="??.html";
+		if(username=="Admin" && password=="DaddyIsHere")
+		{
+			window.location="AdminPage.html";
+			sessionStorage.setItem('Username',username);
+		}
+	
+		else
+		{
+			window.location="landing-page.html";
+		}
 	}
 }
