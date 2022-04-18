@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./post.css">
+        <style>
+            #postList {
+                display: inline-block;
+                border-color: black;
+                border-width: 2px;
+                border-style: solid;
+            }
+        </style>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("./index.html")
+                .then(response => response.text())
+                .then(text => document.getElementById("headerImport").innerHTML = text)
+            });
+
+            function doThing() {
+                let usertext = document.getElementById("user").value;
+                let titletext = document.getElementById("title").value;
+                let bodytext = document.getElementById("body").value;
+
+                fetch("./postimport.html")
+                .then(response => response.text())
+                .then(text=> document.getElementById("postList").innerHTML += 
+                text.replace("USERTEXT", usertext).replace("TITLETEXT", titletext).replace("BODYTEXT", bodytext));
+            }
+        </script>
+    </head>
+    <body>
+        <div id="headerImport"></div>
+        <form>
+            <label for="user">User: </label><br>
+            <input type="text" id="user"><br>
+            <label for="title">Title: </label><br>
+            <input type="text" id="title"><br>
+            <label for="body">Body: </label><br>
+            <input type="text" id="body"><br>
+            <input type="button" value="Create post" onclick="doThing();">
+        </form>
+        <div id="postList">
+            <h1>Posts:</h1>
+        </div>
+    </body>
+</html>
