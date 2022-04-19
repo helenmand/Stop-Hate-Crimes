@@ -38,12 +38,71 @@ body{
 	height: 400px;
 	text-align: center;
 }
+
 .AddButton {
 	margin-top: 130px;
 	margin-left:437px;
 	position: absolute;
-	
 	font-size: 15px;
 	height: 40px;
 	width: 90px;
 }
+.width00shell {
+	width:100px;
+}
+.UserNamelabel {
+	margin-left: 5%;
+	
+}
+.UserNameInput {
+	
+}
+.WarningLabel {
+	margin-left:35%;
+	font-size: 10px;
+	color:red;
+}
+.SelectionAreaUsers {
+	border: 5px ;
+	margin-left:5%;
+
+}
+.UpdateButtons	{
+	margin-left:20%;
+	font-size: 15px;
+	height: 40px;
+	width: 90px;
+}
+.DeleteButtons {
+	margin-left:20%;
+	font-size: 15px;
+	height: 40px;
+	width: 90px;
+}
+
+.ControlsComplainsArticle {
+	margin-left:5%;
+	margin-bottom:10%;
+}
+
+.warningLabelComArt {
+	font-size: 10px;
+	color:red;
+}
+
+.ButtonDelComplArt {
+	margin-top:2%;
+	font-size: 15px;
+	height: 40px;
+	width: 90px;
+}
+
+.ButtonUpComplArt {
+	margin-top:2%;
+	margin-left:10%;
+	font-size: 15px;
+	height: 40px;
+	width: 90px;
+}
+
+
