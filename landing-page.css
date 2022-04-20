@@ -1,23 +1,14 @@
 .landing-page-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-html,
-body {
     display: grid;
     height: 100%;
     width: 100%;
     font-family: "Poppins", sans-serif;
     place-items: center;
-    background: linear-gradient(315deg, #ffffff, #d7e1ec);
 }
 
 .wrapper {
     display: inline-flex;
     list-style: none;
-    margin-bottom: 0.5em;
 }
 
 .bn1 {
@@ -37,14 +28,14 @@ body {
     transition: all 0.2s;
 }
   
-a.bn1:hover {
+li.bn1:hover {
     border-color: rgb(255, 255, 255);
 }
 
-
-.text, .p{
+.text p{
     border: 2px solid #647295;
     padding: .5em;
     text-align: center;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
 }
 
