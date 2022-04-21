@@ -4,20 +4,17 @@
         <link rel="stylesheet" href="./post.css">
         <style>
             #postList {
-                display: inline-block;
-                border-color: black;
-                border-width: 2px;
-                border-style: solid;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border: 2px solid black;
+                width: 50%;
             }
         </style>
+        <script src="./importHeader.js"></script>
+        <script src="./importPost.js"></script>
         <script>
-
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("./index.html")
-                .then(response => response.text())
-                .then(text => document.getElementById("headerImport").innerHTML = text)
-            });
-
+            importRandomPosts(3);
             function doThing() {
                 let usertext = document.getElementById("user").value;
                 let titletext = document.getElementById("title").value;
@@ -31,7 +28,7 @@
         </script>
     </head>
     <body>
-        <div id="headerImport"></div>
+        <div id="importHeader"></div>
         <form>
             <label for="user">User: </label><br>
             <input type="text" id="user"><br>
