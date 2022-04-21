@@ -1,12 +1,10 @@
 .post {
+    align-self: center;
     background-color: #f2ebe5;
-    border-color: #647295;
-    border-style: solid;
-    width: 800px;
+    border: solid #647295;
+    width: 95%;
     height: auto;
     padding: 10px 20px 10px 20px;
-    margin: auto;
-    margin-top: 20px;
 }
 
 .user {
@@ -25,6 +23,7 @@
 }
 
 .body {
+    white-space: pre-line;
     padding-top: 20px;
     padding-bottom: 20px  
 }
