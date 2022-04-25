@@ -1,4 +1,6 @@
 .landing-page-header{
+    margin-top: 1.2em;
+    margin-bottom: 1.5em;
     display: grid;
     height: 100%;
     width: 100%;
@@ -26,6 +28,7 @@
     text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
     text-align: center;
     transition: all 0.2s;
+    cursor: pointer;
 }
   
 li.bn1:hover {
@@ -37,5 +40,24 @@ li.bn1:hover {
     padding: .5em;
     text-align: center;
     background: linear-gradient(315deg, #ffffff, #d7e1ec);
+    border-radius: 5px;
+}
+
+.post-header{
+    border: 1px solid lightgrey;
+    background-color: darkgray;
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+}
+
+.post-header-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
 
