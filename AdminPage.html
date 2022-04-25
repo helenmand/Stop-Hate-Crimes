@@ -6,12 +6,12 @@
 		<link rel="stylesheet" href="AdminPage.css"/>
 		<script src="AdminPage.js"></script>
 	</head>
-	<body onLoad="getAdminName();getData();">
+	<body onLoad="getAdminName();">
 		<p class="positionAdminName" id="AdminName"></p>
-		<p class="Users">Users</p>
+		<p class="titleBorder">Users</p>
 		<a href="landing-page.html"><input class="landingPageButton" type="submit" value="Landing Page"></a>
 		<a href="CreateAccount.html"><input class="AddButton" type="submit" value="Add"></a>
-		<p class="Tag" id="test">User Account List</p>
+		<iframe class="Data" src = "AdminsData/Data.html"></iframe>
 		<div class="SelectionAreaUsers">
 			<table>
 				<tr>
@@ -19,17 +19,17 @@
 						<label class="UserNamelabel">User name</label>
 					</td>
 					<td>
-						<input type="text" Placeholder="User name"/>
+						<input type="text" id="Username" Placeholder="User name"/>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<label class="WarningLabel" >User Not Found</label>
+						<label class="WarningLabel" id="WarningUsername" ></label>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input class="DeleteButtons" type="submit" value="Delete"><input class="UpdateButtons" type="submit" value="Update">
+						<input class="DeleteButtons" type="submit" value="Delete"><input class="UpdateButtons" type="submit" onclick="UpdateButtonUsers()" value="Update">
 					</td>
 				</tr>
 			</table>
@@ -37,10 +37,10 @@
 		<table>
 			<tr>
 				<td>
-					<p class="Users">Complains</p><p class="Tag">Complains List</p>
+					<p class="titleBorder">Complains</p><iframe class="Data" src = "AdminsData/ComplainsData.html"></iframe>
 				</td>
 				<td>
-					<p class="Users">Article</p><p class="Tag">Article List</p>
+					<p class="titleBorder">Article</p><iframe class="Data" src = "AdminsData/ArticlesData.html"></iframe>
 				</td>
 			</tr>
 			<tr>
@@ -48,7 +48,7 @@
 					<table class="ControlsComplainsArticle">
 						<tr>
 							<td>
-								<label>Complains ID:</label><br><input type="text" Placeholder="Complains ID"/><br><label class="warningLabelComArt" >Complain Not Found</label>
+								<label>Complains ID:</label><br><input type="text" id="ComplainID" Placeholder="Complains ID"/><br><label class="warningLabelComArt" id="WarningComplain"></label>
 							</td>
 							<td>
 								<input class="UpdateButtons" type="submit" value="Add">
@@ -56,7 +56,7 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input class="ButtonDelComplArt" type="submit" value="Delete"><input class="ButtonUpComplArt" type="submit" value="Update">
+								<input class="ButtonDelComplArt" type="submit" value="Delete"><input class="ButtonUpComplArt" type="submit" onclick="UpdateButtonComplains()" value="Update">
 							</td>
 						</tr>
 					</table>
@@ -65,7 +65,7 @@
 					<table class="ControlsComplainsArticle">
 						<tr>
 							<td>
-								<label>Article ID:</label><br><input type="text" Placeholder="Article ID"/><br><label class="warningLabelComArt" >Article Not Found</label>
+								<label>Article ID:</label><br><input type="text" id="ArticleID" Placeholder="Article ID"/><br><label class="warningLabelComArt" id="WarningArticle"></label>
 							</td>
 							<td>
 								<input class="UpdateButtons" type="submit" value="Add">
@@ -73,7 +73,7 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input class="ButtonDelComplArt" type="submit" value="Delete"><input class="ButtonUpComplArt" type="submit" value="Update">
+								<input class="ButtonDelComplArt" type="submit" value="Delete"><input class="ButtonUpComplArt" type="submit" onclick="UpdateButtonArticle()" value="Update">
 							</td>
 						</tr>
 					</table>
