@@ -4,7 +4,7 @@
     display: grid;
     height: 100%;
     width: 100%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
     place-items: center;
 }
 
@@ -31,7 +31,30 @@
     cursor: pointer;
 }
   
-li.bn1:hover {
+.bn1:hover {
+    border-color: rgb(255, 255, 255);
+    background-color: #2b262d;
+}
+
+.bn2 {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    background-color: #2b262d;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: lightgrey;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+  
+.bn2:hover {
     border-color: rgb(255, 255, 255);
 }
 
@@ -43,9 +66,19 @@ li.bn1:hover {
     border-radius: 5px;
 }
 
+.posts{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .post-header{
-    border: 1px solid lightgrey;
-    background-color: darkgray;
+    border: 1px solid darkgray;
+    background-color: lightgray;
     align-items: center;
     border-radius: 5px;
     box-sizing: border-box;
@@ -54,10 +87,36 @@ li.bn1:hover {
     padding: 10px 12px;
 }
 
-.post-header-buttons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.buttons-right{
+    margin-left: auto;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .bn2 {background-color: #2e2b2f;}
+
+
 
