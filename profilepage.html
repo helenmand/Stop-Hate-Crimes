@@ -1,20 +1,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="profilepage.css"><link>
+
+        <script src="./importHeader.js"></script>
         <script src="./importPost.js"></script>
         <script>importRandomPosts(3)</script>
         <link rel="stylesheet" href="./post.css">
-        <div class="header">
-          <link rel="stylesheet" href="header.css"><link>
-          <a href="#default" class="logo">Loggoooo</a>
-          <div class="header-right">
-          <a class="active" href="#home">Home</a>
-          <a href="#search">Search</a>
-          <a href="#profile">Profile</a>
-          </div>
+        
       </div>
+    
     </head>
     <body>
+      <div id="importHeader"></div>
       <div id="profile-upper">
         <div id="profile-banner-image">
           <img src="https://wallpapercave.com/wp/wp7671629.png" alt="Banner image">
@@ -25,8 +22,12 @@
           </div>
           <div id="username">Demo User</div>
         </div>
-          <div class="postL" id="postList">
-          </div>
       </div>
+
+      <div id="profile-post">
+        <div class="postL" id="postList">
+        </div>
+      </div>
+
     </body>
 </html>
