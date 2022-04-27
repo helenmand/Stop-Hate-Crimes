@@ -3,6 +3,9 @@
     <head>
         <link rel="stylesheet" href="./landing-page.css">
         <script src="./importHeader.js"></script>
+        <script src="./importPost.js"></script>
+        <script>importRandomPosts(3)</script>
+        <link rel="stylesheet" href="./post.css">
     </head>
     <body>
         <div id="importHeader"></div>
@@ -17,10 +20,30 @@
                 <p>Hello, this is our website!<br> Let's get zanny </p>
             </div>
         </div>
+        <div class="posts">
         <div class="post-header">
-            <div class="post-header-buttons">
-                <a href="/trending/" class="bn1">Trending</a>
+            <a href="/trending/" class="bn2">Trending</a>
+            <div class="dropdown">
+                <a class="bn2">Thessaloniki</a>
+                <div class="dropdown-content">
+                    <a href="#">Athens</a>
+                    <a href="#">Larissa</a>
+                    <a href="#">Serres</a>
+                </div>
             </div>
+            <div class="buttons-right">
+                <div class="dropdown">
+                    <a class="bn2">▼</a>
+                    <div class="dropdown-content">
+                        <a href="#">More 1</a>
+                        <a href="#">More 2</a>
+                        <a href="#">More 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="postL" id="postList">
+        </div>
         </div>
     </body>
 </html>
