@@ -13,3 +13,8 @@
 .commentReply {
     padding: 25px 0px 0px 0px;
 }
+
+.commentUser {
+    font-size: smaller;
+    font-style: italic;
+}
