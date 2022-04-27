@@ -1,0 +1,15 @@
+.comment {
+    background-color: #f2ebe5;
+    border-left: 2px solid #647295;
+    width: 95%;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+}
+
+.commentBody {
+    padding: 10px 0px 10px 0px;
+}
+
+.commentReply {
+    padding: 25px 0px 0px 0px;
+}
