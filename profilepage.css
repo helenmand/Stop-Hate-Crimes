@@ -2,11 +2,16 @@
     outline: none;
   }
   
-  body {
+
+  .profile{
     font-family: Helvetica;
     background-color: #f2ebe5;
     padding: 10px 200px;
+    width: 0 auto;
+    margin: 0 auto;
   }
+
+
   
   img {
     display: block;
@@ -14,10 +19,7 @@
     border: 0;
   }
 
-  html {
-    width: 0 auto;
-    margin: 0 auto;
-  }
+  
 
   #profile-upper {
     position: relative;
