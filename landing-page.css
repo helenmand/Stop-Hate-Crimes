@@ -118,5 +118,9 @@
 
 .dropdown:hover .bn2 {background-color: #2e2b2f;}
 
-
+.postL{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
