@@ -23,6 +23,7 @@ body {
 }
 
 .header a.logo {
+    margin-top: 10px;
     font-size: 25px;
     font-weight: bold;
 }
@@ -79,4 +80,54 @@ body {
   
 .bn3:hover {
     border-color: rgb(255, 255, 255);
+}
+
+form{
+    
+    background-color: #9f496e;
+    width: 300px;
+    height: 44px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+input {
+   
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+    
+}
+
+::placeholder {
+    color: #2b262d;
+    opacity: 0.7; 
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+}
+
+form button img{
+    height: 25px;
+    width: 25px;
+    margin-top:25%;
+    margin-bottom:25%;
+}
+
+button img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
