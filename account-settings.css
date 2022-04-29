@@ -1,0 +1,89 @@
+.settings-header {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+.grid-container {
+    margin: 0 auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    gap: 10px 10px;
+    align-items: end;
+}
+
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    margin-left: 10%;
+}
+  
+.grid-item-right {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    float:right;
+    margin-left: 10%;
+}
+
+.grid-item-right form{
+    float: left;
+}
+
+.grid-item-left {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    margin-right: 10%;
+}
+
+.grid-item-left form{
+    float: right;
+}
+  
+.grid-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+}
+
+.grid-container input[type=text],  input[type=password] {
+    padding: 10px;
+}
+
+.form-button-item-left a{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 30%;
+    float: right;
+}
+
+.form-button-item-right a{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 30%;
+    float: left;
+}
+
+
+.form-button-item-left .bn2,.form-button-item-right .bn2{
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    background-color: #2b262d;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: lightgrey;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+  
+.form-button-item-right .bn2:hover, .form-button-item-left .bn2:hover{
+    border-color: rgb(255, 255, 255);
+}
+

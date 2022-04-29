@@ -82,8 +82,7 @@ body {
     border-color: rgb(255, 255, 255);
 }
 
-form{
-    
+.header-right form{
     background-color: #9f496e;
     width: 300px;
     height: 44px;
@@ -95,7 +94,7 @@ form{
 }
 
 
-input {
+.header-right input {
    
     all: unset;
     font: 16px system-ui;
