@@ -1,8 +1,12 @@
 #postList {
-    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+#postGroup {
+    padding: 20px 20px;
+    padding-bottom: 0px;
     margin: auto;
     width: 50%;
 }
