@@ -46,10 +46,14 @@
     height: 150px;
     border-radius: 50%;
     float: left;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
 .grid-container input[type=text],  input[type=password] {
     padding: 10px;
+    border: 2px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
 }
 
 .form-button-item-left a{
@@ -81,6 +85,7 @@
     transition: all 0.2s;
     cursor: pointer;
     font-family: "Roboto", sans-serif;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
   
 .form-button-item-right .bn2:hover, .form-button-item-left .bn2:hover{
