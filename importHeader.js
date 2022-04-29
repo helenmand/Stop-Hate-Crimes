@@ -1,5 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("./header.html")
-    .then(response => response.text())
-    .then(text => document.getElementById("importHeader").innerHTML = text);
+document.addEventListener("DOMContentLoaded", async function () {
+    let response = await fetch("./header.html");
+    let text = await response.text();
+    document.getElementById("importHeader").innerHTML = text;
+    
+    username=sessionStorage.getItem("Username");
+	password=sessionStorage.getItem("Password");
+	
+	if(username=="Admin" && password=="DaddyIsHere")
+		{
+			adminButton = document.getElementById("adminButton");
+			adminButton.style.visibility="visible";
+		}
 });
