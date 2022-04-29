@@ -28,6 +28,16 @@
     padding-bottom: 20px  
 }
 
-.postReplyButton {
+.postButtons {
     vertical-align: bottom;
+    display: flex;
+    gap: 50px;
+}
+
+.postReplyButton {
+    width: auto;
+}
+
+.postViewCommentsButton {
+    width: auto;
 }
