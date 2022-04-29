@@ -7,13 +7,13 @@
     padding: 10px 20px 10px 20px;
 }
 
-.user {
+.postUser {
     padding-bottom: 5px;
     font-size: smaller;
     font-style: italic;
 }
 
-.title {
+.postTitle {
     font-size: larger;
     border-style: solid;
     border-color: #647295;
@@ -22,12 +22,12 @@
     border-right: hidden;
 }
 
-.body {
+.postBody {
     white-space: pre-line;
     padding-top: 20px;
     padding-bottom: 20px  
 }
 
-.bigassbutton {
+.postReplyButton {
     vertical-align: bottom;
 }
