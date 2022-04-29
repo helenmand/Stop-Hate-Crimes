@@ -14,6 +14,7 @@ function checkinput()
 		{
 			window.location="AdminPage.html";
 			sessionStorage.setItem('Username',username);
+			sessionStorage.setItem("Password", password);
 		}
 	
 		else
