@@ -76,47 +76,15 @@
     margin-right: auto;
 }
 
-.post-header{
-    border: 1px solid darkgray;
-    background-color: lightgray;
-    align-items: center;
-    border-radius: 5px;
-    box-sizing: border-box;
+.PVB{
     display: flex;
-    margin-bottom: 16px;
-    padding: 10px 12px;
-}
-
-.buttons-right{
+    flex-direction: column;
+    justify-content: center;
+    width: 640px;
     margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
 }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .bn2 {background-color: #2e2b2f;}
 
 .postL{
     display: flex;

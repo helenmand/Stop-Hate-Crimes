@@ -79,3 +79,10 @@
     flex-direction: column;
     gap: 20px;
   }
+
+.myposts{
+    padding-top: 1em;
+    border-style: double;
+    width: fit-content;
+    padding-bottom: 1em;
+}
