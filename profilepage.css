@@ -81,8 +81,10 @@
   }
 
 .myposts{
-    padding-top: 1em;
     border-style: double;
     width: fit-content;
-    padding-bottom: 1em;
+    border-color: #647295;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 10%;
 }
