@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CreateAccount.css">
         <script src="./importHeader.js"></script>
+        <script src="./CreateAccount.js"></script>
         <title>Create Account</title>
 	</head>
 	<body>
@@ -11,7 +13,8 @@
 		<div class="gridcontainer">
 			<div class="leftposition">
 				<label for="username">Username:</label><br>
-				<input type="text" id="username" name="usname">
+				<input type="text" id="username" name="usname"><br>
+				<label class="warninglabel" id="warningUsername"></label>
 			</div>
 			<div class="gridpassword">
 				<div class="leftposition2items top">
@@ -28,7 +31,7 @@
 				<input type="text" id="email" name="email">
 			</div>
 			<div class="buttonposition">
-				<a href="landing-page.html"><input class="ButtonCreate" type="submit" id="buttonCreate" value="Create"></a>
+				<input class="ButtonCreate" type="submit" id="buttonCreate" value="Create" onclick="checkUsername()">
 			</div>
 		</div>
 	</body>
