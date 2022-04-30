@@ -31,6 +31,12 @@
 	padding-left: 20%;
 }
 
+.warninglabel {
+	font-size:60%;
+	color:red;
+	position:absolute;
+}
+
 .rightposition2items {
 	padding-left: 7%;
 }
@@ -41,7 +47,7 @@
 
 .buttonposition {
 	padding-top:5%;
-	padding-left:42%
+	padding-left:38%
 }
 
 .ButtonCreate {
