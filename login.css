@@ -1,27 +1,44 @@
-body{
-	background-color: #647295 ;
-}
-
-.positionborder {
-	border: 10px;
-	width: 330px;
-	margin: 200px auto;
-}
-
-.positionIn2Col{
+.headerlogin {
+	padding-top: 2%;
+	padding-bottom:5%;
 	text-align: center;
 }
 
+.gridcontainer {
+	display: grid;
+	margin-left:auto;
+	margin-right:auto;
+	width: 50%;
+	grid-template-rows: 15% 15% 15%;
+	grid-template-columns:50% 50%;
+	font-size:100%;
+	padding-top:2%;
+	
+}
+
+.labelsposition {
+	padding-right:5%;
+	float:right;
+}
+.top {
+	padding-top:2%;
+}
+
+.loginButtonPosition {
+	grid-column: 1 / span 2;
+  	grid-row: 3;
+  	padding-left: 40%;
+  	padding-top:7%;
+}
 .loginButton{
-	margin-top:10px;
-	font-size: 15px;
-	height: 40px;
-	width: 110px;
+	font-size: 90%;
+	height: 180%;
+	width: 100px;
 }
 
 .warningLabel{
-	text-align: center;
-	font-size: 10px;
+	font-size: 60%;
 	color: red;
-	
+	position:absolute;
 }
+
