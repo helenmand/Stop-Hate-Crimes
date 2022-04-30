@@ -1,0 +1,57 @@
+.headerCreateAccount {
+	padding-top: 2%;
+	padding-bottom:5%;
+	text-align: center;
+}
+
+.gridcontainer {
+	display: grid;
+	margin:auto;
+	width: 70%;
+	grid-template-rows: 10% 10% 10% 10%;
+	font-size:110%;
+	padding-top:2%;
+}
+
+
+.gridpassword {
+	display: grid;
+	grid-template-columns:50% 50%;
+}
+
+.top {
+	padding-top:5%;
+}
+
+.leftposition {
+	padding-left: 10%;
+}
+
+.leftposition2items {
+	padding-left: 20%;
+}
+
+.warninglabel {
+	font-size:60%;
+	color:red;
+	position:absolute;
+}
+
+.rightposition2items {
+	padding-left: 7%;
+}
+
+.email {
+	padding-top:3%;
+}
+
+.buttonposition {
+	padding-top:5%;
+	padding-left:38%
+}
+
+.ButtonCreate {
+	font-size: 90%;
+	height: 180%;
+	width: 30%;
+}

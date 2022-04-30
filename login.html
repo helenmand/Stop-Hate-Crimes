@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="./login.css"/>
+		<script src="./importHeader.js"></script>
+		<script src="./login.js"></script>
 		<title>Login</title>
-		<link rel="stylesheet" href="login.css"/>
-		<script src="login.js"></script>
 	</head>
 	<body>
-		<table class="positionborder">
-			<tr>
-				<td>
-					<label for="usname">User's name</label>
-				</td>
-				<td>
-					<input type="text" id="usname" name="username">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label for="psword">Password</label>
-				</td>
-				<td>
-					<input type="password" id="psword" name="password">
-				</td>
-			</tr>
-			<tr>
-				<td class="positionIn2Col" colspan="2">
-					<label class="warningLabel" id="warningOutput"></label>
-				</td>
-			</tr>
-			<tr>
-				<td class="positionIn2Col" colspan="2">
-					<input class="loginButton" type="submit" onclick="checkinput()" value="Log in">
-				</td>
-			</tr>
-		</table>
+	<h1 class="headerlogin">Log in</h1> 
+	<div class="gridcontainer">
+		<div>
+			<label class="labelsposition" for="usname">Username</label>
+		</div>
+		<div>
+			<input type="text" id="usname" name="username">
+		</div>
+		<div class="top">
+			<label class="labelsposition" for="psword">Password&nbsp;</label>
+		</div>
+		<div class="top">
+			<input type="password" id="psword" name="password"><br>
+			<label class="warningLabel" id="warningOutput"></label>
+		</div>
+		<div class="loginButtonPosition">
+			<input class="loginButton" type="submit" onclick="checkinput()" value="Log in">
+		</div>
+	</div>
+	
 	</body>
 </html> 
