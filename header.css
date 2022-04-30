@@ -22,10 +22,11 @@ body {
     border-radius: 4px;
 }
 
-.header a.logo {
+.header .logo img{
     margin-top: 10px;
     font-size: 25px;
     font-weight: bold;
+    border: 3px solid #647295;
 }
 
 .header a:hover {
