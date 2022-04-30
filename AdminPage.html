@@ -3,82 +3,84 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Admin</title>
-		<link rel="stylesheet" href="AdminPage.css"/>
+		<link rel="stylesheet" href="AdminPageV2.css"/>
 		<script src="AdminPage.js"></script>
 	</head>
 	<body onLoad="getAdminName();">
-		<p class="positionAdminName" id="AdminName">admin</p>
-		<p class="titleBorder">Users</p>
-		<a href="landing-page.html"><input class="landingPageButton" type="submit" value="Landing Page"></a>
-		<a href="CreateAccount.html"><input class="AddButton" type="submit" value="Add"></a>
-		<iframe class="Data" src = "AdminsData/UsersData.html"></iframe>
-		<div class="SelectionAreaUsers">
-			<table>
-				<tr>
-					<td class="width00shell">
-						<label class="UserNamelabel">User name</label>
-					</td>
-					<td>
-						<input type="text" id="Username" Placeholder="User name"/>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<label class="WarningLabel" id="WarningUsername" ></label>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<input class="DeleteButtons" type="submit" value="Delete"><input class="UpdateButtons" type="submit" onclick="UpdateButtonUsers()" value="Update">
-					</td>
-				</tr>
-			</table>
+		<h3 class="AdminName" id="AdminName"></h3>
+		<div class="topGridContainer">
+			<div class="UserlabelPosition">
+				<label class="Userslabel">Users</label>
+			</div>
+			<div class="landingPageButtonPosition">
+				<a href="landing-page.html"><input class="landingPageButton" type="submit" value="Landing Page"></a>
+			</div>
+			<div class="DataUser">
+			</div>
+			<div class="AddButtonPosition">
+				<a href="CreateAccount.html"><input class="AddButton" type="submit" value="Add"></a>
+			</div>
+			<div class="userControlsGridContainer">
+				<div class="UserNamelabelPosition">
+					<label class="UserNamelabel">User name</label>
+				</div>
+				<div>
+					<input class="UserInput" type="text" id="Username" Placeholder="User name"/><br>
+					<label class="WarningLabel" id="WarningUsername" ></label>
+				</div>
+				<div class="deletePosition">
+					<input class="DeleteButtons" type="submit" value="Delete">
+				</div>
+				<div class="UpdatePosition">
+					<input class="UpdateButtons" type="submit" onclick="UpdateButtonUsers()" value="Update">
+				</div>
+			</div>
 		</div>
-		<table>
-			<tr>
-				<td>
-					<p class="titleBorder">Complains</p><iframe class="Data" src = "AdminsData/ComplainsData.html"></iframe>
-				</td>
-				<td>
-					<p class="titleBorder">Article</p><iframe class="Data" src = "AdminsData/ArticlesData.html"></iframe>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<table class="ControlsComplainsArticle">
-						<tr>
-							<td>
-								<label>Complains ID:</label><br><input type="text" id="ComplainID" Placeholder="Complains ID"/><br><label class="warningLabelComArt" id="WarningComplain"></label>
-							</td>
-							<td>
-								<input class="UpdateButtons" type="submit" value="Add">
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input class="ButtonDelComplArt" type="submit" value="Delete"><input class="ButtonUpComplArt" type="submit" onclick="UpdateButtonComplains()" value="Update">
-							</td>
-						</tr>
-					</table>
-				</td>
-				<td>
-					<table class="ControlsComplainsArticle">
-						<tr>
-							<td>
-								<label>Article ID:</label><br><input type="text" id="ArticleID" Placeholder="Article ID"/><br><label class="warningLabelComArt" id="WarningArticle"></label>
-							</td>
-							<td>
-								<input class="UpdateButtons" type="submit" value="Add">
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input class="ButtonDelComplArt" type="submit" value="Delete"><input class="ButtonUpComplArt" type="submit" onclick="UpdateButtonArticle()" value="Update">
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
+		<div class="botGridContainer">
+			<div class="UserlabelPosition">
+				<label class="Userslabel">Complains</label>
+			</div>
+			<div class="UserlabelPosition ArticlePadding">
+				<label class="Userslabel">Articles</label>
+			</div>
+			<div class="DataUser">
+			</div>
+			<div class="DataUser ArticlePadding">
+			</div>
+			<div class="botControlsgridContainer">
+				<div class="connectcols1_2">
+					<label>Complain ID:</label><br>
+					<input class="widthinput"type="text" id="ComplainID" Placeholder="Complain ID"/><br>
+					<label class="WarningLabel" id="WarningComplain"></label>
+				</div>
+				<div>
+					<input class="UpdateButtons" type="submit" value="Add">
+				</div>
+				<div class="buttonsDeleteComArt">
+					<input class="UpdateButtons " type="submit" value="Delete">
+				</div>
+				<div class="buttonsUpdateComArt">
+					<input class="UpdateButtons " type="submit" onclick="UpdateButtonComplains()" value="Update">
+				</div>
+			</div>
+			<div class="botControlsgridContainer ArticleGridPadding">
+				<div class="connectcols1_2">
+						<label>Article ID:</label><br>
+						<input class="widthinput"type="text" id="ComplainID" Placeholder="Article ID"/><br>
+						<label class="WarningLabel" id="WarningArticle"></label>
+					</div>
+					<div>
+						<input class="UpdateButtons" type="submit" value="Add">
+					</div>
+					<div class="buttonsDeleteComArt">
+						<input class="UpdateButtons " type="submit" value="Delete">
+					</div>
+					<div class="buttonsUpdateComArt">
+						<input class="UpdateButtons " type="submit" onclick="UpdateButtonComplains()" value="Update">
+					</div>
+				<div></div>
+			</div>
+		</div>
 	</body>
-</html> 
+</html>
+

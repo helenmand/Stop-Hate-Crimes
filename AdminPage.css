@@ -1,111 +1,137 @@
-body{
-	background-color: #647295;
+.AdminName {
+	margin-top:5%;
+	margin-left: 45%;
 }
 
-iframe {
-	width: 450;
-	height: 400;
+.topGridContainer {
+	display: grid;
+	margin: auto;
+	width: 90%;
+	grid-template-rows: 20% 410px 20%;
+	grid-template-columns: 50% 50%;
 }
 
-.positionAdminName {
-	border: 10px;
-	width: 330px;
-	margin: 100px auto auto auto;
-	text-align: center;
-	
+.UserlabelPosition {
+	padding-top:5%;
+}
+.Userslabel {
+	font-size: 110%;
+	float: left;
+}
+.landingPageButtonPosition {
+	padding-right: 30%;
 }
 
 .landingPageButton {
-	margin-top: 1%;
-	margin-right: 10%;
 	float: right;
-	font-size: 15px;
-	height: 50px;
-	width: 100px;
-	display: inline;
-	max-width: 500px;
+	font-size: 90%;
+	height: 120%;	
+	width: 40%
 }
 
-.titleBorder {
-	float: left; 
-	margin-left: 5%;
-	margin-top: 40px;
-	display: inline;
-	position: absolute;
-}
-
-
-.Data {
- 	margin-top: 60px;
-	margin-left: 5%;
+.DataUser{
 	border: 5px solid blue;
-	width: 450px;
-	height: 400px;
-	/*text-align: center;*/
+	width:100%;
+	height:100%;
 }
-
+.AddButtonPosition{
+	padding-right:60%;
+	padding-top:20%;
+	
+}
 .AddButton {
-	margin-top: 130px;
-	margin-left:550px;
-	position: absolute;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+	float:right;
+	font-size: 90%;
+	height: 15%;
+	width: 65%;
 }
-.width00shell {
-	width:100px;
+.userControlsGridContainer {
+	display: grid;
+	margin: auto;
+	width: 100%;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 50% 55%;
+	padding-top:5%;
+}
+.UserNamelabelPosition {
+	/*padding-top:2%;*/
 }
 .UserNamelabel {
-	margin-left: 5%;
 	
+}
+.UserInput {
+	float: right;
+	width: 100%;
 }
 
 .WarningLabel {
-	margin-left:35%;
-	font-size: 10px;
+	padding-top:0.5%;
+	font-size: 70%;
 	color:red;
+	position:absolute;
 }
-.SelectionAreaUsers {
-	border: 5px ;
-	margin-left:5%;
+.UpdatePosition {
+  padding-top:10%;
+}
 
+.deletePosition {
+  padding-top:12%;
 }
+
 .UpdateButtons	{
 	margin-left:20%;
-	font-size: 15px;
+	font-size: 90%;
 	height: 40px;
 	width: 90px;
 }
 .DeleteButtons {
 	margin-left:20%;
-	font-size: 15px;
+	font-size: 90%;
 	height: 40px;
 	width: 90px;
 }
 
-.ControlsComplainsArticle {
-	margin-left:5%;
-	margin-bottom:10%;
+.botGridContainer {
+	display: grid;
+	margin-top:5%;
+	margin-left:auto;
+	margin-right:auto;
+	width: 90%;
+	grid-template-rows: 20% 410px 20%;
+	grid-template-columns: 50% 50%;
+	/*background-color: #2196F3;*/
 }
 
-.warningLabelComArt {
-	font-size: 10px;
-	color:red;
+.connectcols1_2 {
+	grid-column: 1 / span 2;
+	grid-row: 1;
 }
 
-.ButtonDelComplArt {
-	margin-top:2%;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+.widthinput {
+	width:80%;
+}
+.ArticlePadding {
+	margin-left:7%;
 }
 
-.ButtonUpComplArt {
-	margin-top:2%;
-	margin-left:10%;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+.botControlsgridContainer {
+	display: grid;
+	margin: auto;
+	width: 100%;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 40% 25% 15%;
+	padding-top:5%;
+}
+.ArticleGridPadding {
+	padding-left: 8%;
+}
+.buttonsUpdateComArt {
+	padding-top:25%;
+	padding-left:20%;
 }
 
-
+.buttonsDeleteComArt {
+	padding-top:16%;
+	padding-left:5%;
+	padding-right:10%;
+}
