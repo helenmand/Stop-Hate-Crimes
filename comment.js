@@ -1,14 +1,21 @@
 let totalComments = 0;
 async function createComments(containerId, numOfComments) {
+    if(totalComments > 20) {
+        return;
+    }
     let response = await fetch("./commentimport.html");
     let text = await response.text();
-    numOfComments++;
+    
 
     for(let i=0;i<numOfComments;i++) {
         document.getElementById(containerId).innerHTML += text
         .replace("USERTEXT", returnRandomWord)
         .replace("BODYTEXT", returnText(Math.random() * 50))
         .replace("REPLYID", "reply" + totalComments);
+        if(Math.floor(Math.random()*10)%2==0) {
+            createComments("reply" + totalComments, 1);
+        }
+        totalComments++;
     }
 }
 

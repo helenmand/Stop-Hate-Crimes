@@ -4,7 +4,10 @@ function importPost(post) {
     fetch("./postimport.html")
     .then(response => response.text())
     .then(text=> document.getElementById("postList").innerHTML += 
-    text.replace("USERTEXT", post.user).replace("TITLETEXT", post.title).replace("BODYTEXT", post.body));
+    text.replace("USERTEXT", post.user)
+    .replace("TITLETEXT", post.title)
+    .replace("BODYTEXT", post.body)
+    .replace("class=\"postTitle\"", "class=\"postTitle\" onClick=\"openPost(" + post.id + ")\""));
 }
 
 function returnPostById(id) {
@@ -13,6 +16,12 @@ function returnPostById(id) {
             return post;
         }
     }
+}
+
+function openPost(postid) {
+    sessionStorage.removeItem("postid");
+    sessionStorage.setItem("postid", postid);
+    window.location = "./postWithComments.html";
 }
 
 async function fetchData() {
@@ -29,4 +38,9 @@ async function importRandomPosts(numberOfPosts) {
     for(var id of idArray) {
         importPost(returnPostById(id));
     }
+}
+
+async function importClickedPost() {
+    posts = await fetchData();
+    importPost(returnPostById(sessionStorage.getItem("postid")));
 }

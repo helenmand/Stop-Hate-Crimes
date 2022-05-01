@@ -1,0 +1,14 @@
+#postWithComments {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 60%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+#commentList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
