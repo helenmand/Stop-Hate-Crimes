@@ -1,6 +1,6 @@
 .headerCreateAccount {
-	padding-top: 2%;
-	padding-bottom:5%;
+	padding-top: 10px;
+	padding-bottom:15px;
 	text-align: center;
 }
 
@@ -8,27 +8,21 @@
 	display: grid;
 	margin:auto;
 	width: 70%;
-	grid-template-rows: 10% 10% 10% 10%;
-	font-size:110%;
-	padding-top:2%;
-}
-
-
-.gridpassword {
-	display: grid;
+	grid-template-rows: 45px 45px 45px 80px;
 	grid-template-columns:50% 50%;
+	font-size:110%;
+	padding-top:40px;
+	max-width:700px;
+	min-width:600px;
 }
 
 .top {
-	padding-top:5%;
+	padding-top:10px;
 }
 
 .leftposition {
-	padding-left: 10%;
-}
-
-.leftposition2items {
-	padding-left: 20%;
+	float:left;
+	padding-left: 30%;
 }
 
 .warninglabel {
@@ -38,20 +32,24 @@
 }
 
 .rightposition2items {
-	padding-left: 7%;
+	padding-left: 1%;
 }
 
 .email {
-	padding-top:3%;
+	padding-top:20px;
 }
 
 .buttonposition {
-	padding-top:5%;
-	padding-left:38%
+	padding-left:41%;
+	padding-top:35px;
+	grid-column:1 / span 2;
+	grid-row:4;
 }
 
 .ButtonCreate {
 	font-size: 90%;
-	height: 180%;
-	width: 30%;
+	height: 150%;
+	width: 25%;
+	max-height:50px;
+	min-width:80px;
 }
