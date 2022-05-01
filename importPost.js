@@ -7,7 +7,7 @@ function importPost(post) {
     text.replace("USERTEXT", post.user)
     .replace("TITLETEXT", post.title)
     .replace("BODYTEXT", post.body)
-    .replace("class=\"postTitle\"", "class=\"postTitle\" onClick=\"openPost(" + post.id + ")\""));
+    .replace("OPENPOSTPOSTID", post.id));
 }
 
 function returnPostById(id) {

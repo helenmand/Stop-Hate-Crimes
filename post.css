@@ -22,12 +22,6 @@
     border-right: hidden;
 }
 
-.postTitle:hover {
-    cursor: pointer;
-    border-color: #718cd1;
-    background-color: #d6d2ce;
-}
-
 .postBody {
     white-space: pre-line;
     padding-top: 20px;
