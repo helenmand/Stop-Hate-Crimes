@@ -1,7 +1,15 @@
 function getAdminName()
 {
 	Username=sessionStorage.getItem('Username');
-	document.getElementById("AdminName").innerHTML=Username;
+	Password=sessionStorage.getItem('Password');
+	if (Username=="Admin" && Password=="DaddyIsHere")
+	{
+		document.getElementById("AdminName").innerHTML=Username;
+	}
+	else
+	{
+		window.location="./index.html";
+	}
 }
 
 function UpdateButtonUsers()
