@@ -1,0 +1,31 @@
+#postForm {
+    border: 1px solid black;
+    padding: 1%;
+    margin: 2%;
+    height: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#postBody {
+    min-height: 15vh;
+    min-width: 25vw;
+
+    height: 30vh;
+    width: 50vw;
+
+    max-height: 50vh;
+    max-width: 80vw;
+
+    resize: both;
+}
+
+#postTitle {
+    height: 2rem;
+}
+
+#formSubmitButton {
+    width: fit-content;
+}
