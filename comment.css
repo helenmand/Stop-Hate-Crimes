@@ -11,8 +11,12 @@
 
 }
 
-.commentReply {
-    padding: 25px 0px 0px 0px;
+.commentButtons {
+    padding: 0px 0px 0px 0px;
+}
+
+.commentReplyButton {
+    width: auto;
 }
 
 .commentUser {
