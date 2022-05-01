@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Admin</title>
-		<link rel="stylesheet" href="AdminPageV2.css"/>
+		<link rel="stylesheet" href="AdminPage.css"/>
 		<script src="AdminPage.js"></script>
 	</head>
 	<body onLoad="getAdminName();">
@@ -16,23 +16,45 @@
 				<a href="landing-page.html"><input class="landingPageButton" type="submit" value="Landing Page"></a>
 			</div>
 			<div class="DataUser">
+				<table class="table">
+					<tr>
+						<th class="namecol">
+							Name
+						</th>
+						<th class="psswdcol">
+							Password
+						</th>
+						<th class="emailcol">
+							Email
+						</th>
+					</tr>
+					<tr>
+						<td class="namecol">
+							Admin
+						</td>
+						<td class="psswdcol">
+							DaddyIsHereasguarfduyayufg
+						</td>
+						<td class="emailcol">
+							admin@gmail.com
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="AddButtonPosition">
 				<a href="CreateAccount.html"><input class="AddButton" type="submit" value="Add"></a>
 			</div>
 			<div class="userControlsGridContainer">
-				<div class="UserNamelabelPosition">
-					<label class="UserNamelabel">User name</label>
-				</div>
-				<div>
-					<input class="UserInput" type="text" id="Username" Placeholder="User name"/><br>
+				<div class="connectcols1_2 UserNamelabelPosition">
+					<label>Username</label><input class="UserInput" type="text" id="Username" Placeholder="User name"/><br>
 					<label class="WarningLabel" id="WarningUsername" ></label>
 				</div>
+
 				<div class="deletePosition">
-					<input class="DeleteButtons" type="submit" value="Delete">
+					<input class="buttons" type="submit" value="Delete">
 				</div>
 				<div class="UpdatePosition">
-					<input class="UpdateButtons" type="submit" onclick="UpdateButtonUsers()" value="Update">
+					<input class="buttons" type="submit" onclick="UpdateButtonUsers()" value="Update">
 				</div>
 			</div>
 		</div>
@@ -44,8 +66,34 @@
 				<label class="Userslabel">Articles</label>
 			</div>
 			<div class="DataUser">
+				<table class="table">
+					<tr>
+						<th class="namecol">
+							ID
+						</th>
+						<th class="psswdcol">
+							Title
+						</th>
+						<th class="emailcol">
+							User
+						</th>
+					</tr>
+				</table>
 			</div>
 			<div class="DataUser ArticlePadding">
+				<table class="table">
+					<tr>
+						<th class="namecol">
+							ID
+						</th>
+						<th class="psswdcol">
+							Title
+						</th>
+						<th class="emailcol">
+							User
+						</th>
+					</tr>
+				</table>
 			</div>
 			<div class="botControlsgridContainer">
 				<div class="connectcols1_2">
@@ -54,13 +102,13 @@
 					<label class="WarningLabel" id="WarningComplain"></label>
 				</div>
 				<div>
-					<input class="UpdateButtons" type="submit" value="Add">
+					<input class="buttons" type="submit" value="Add">
 				</div>
 				<div class="buttonsDeleteComArt">
-					<input class="UpdateButtons " type="submit" value="Delete">
+					<input class="buttons " type="submit" value="Delete">
 				</div>
 				<div class="buttonsUpdateComArt">
-					<input class="UpdateButtons " type="submit" onclick="UpdateButtonComplains()" value="Update">
+					<input class="buttons UpdateComArt" type="submit" onclick="UpdateButtonComplains()" value="Update">
 				</div>
 			</div>
 			<div class="botControlsgridContainer ArticleGridPadding">
@@ -70,13 +118,13 @@
 						<label class="WarningLabel" id="WarningArticle"></label>
 					</div>
 					<div>
-						<input class="UpdateButtons" type="submit" value="Add">
+						<input class="buttons" type="submit" value="Add">
 					</div>
 					<div class="buttonsDeleteComArt">
-						<input class="UpdateButtons " type="submit" value="Delete">
+						<input class="buttons" type="submit" value="Delete">
 					</div>
 					<div class="buttonsUpdateComArt">
-						<input class="UpdateButtons " type="submit" onclick="UpdateButtonComplains()" value="Update">
+						<input class="buttons UpdateComArt" type="submit" onclick="UpdateButtonComplains()" value="Update">
 					</div>
 				<div></div>
 			</div>
