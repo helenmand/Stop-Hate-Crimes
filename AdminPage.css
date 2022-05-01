@@ -1,111 +1,176 @@
-body{
-	background-color: #647295;
+.AdminName {
+	margin-top:50px;
+	margin-left: 45%;
 }
 
-iframe {
-	width: 450;
-	height: 400;
+.topGridContainer {
+	display: grid;
+	margin: auto;
+	width: 90%;
+	grid-template-rows: 40px 410px 40px;
+	grid-template-columns: 50% 50%;
 }
 
-.positionAdminName {
-	border: 10px;
-	width: 330px;
-	margin: 100px auto auto auto;
-	text-align: center;
-	
+.UserlabelPosition {
+	padding-top:20px;
+}
+.Userslabel {
+	font-size: 110%;
+	float: left;
+}
+.landingPageButtonPosition {
+	padding-right: 30%;
 }
 
 .landingPageButton {
-	margin-top: 1%;
-	margin-right: 10%;
 	float: right;
-	font-size: 15px;
-	height: 50px;
-	width: 100px;
-	display: inline;
-	max-width: 500px;
+	font-size: 90%;
+	height: 120%;	
+	width: 40%;
+	max-height:50px;
+	min-height:30px;
+	max-width:120px;
+	min-width:100px;
 }
 
-.titleBorder {
-	float: left; 
-	margin-left: 5%;
-	margin-top: 40px;
-	display: inline;
-	position: absolute;
-}
-
-
-.Data {
- 	margin-top: 60px;
-	margin-left: 5%;
+.DataUser{
 	border: 5px solid blue;
-	width: 450px;
-	height: 400px;
-	/*text-align: center;*/
+	width:100%;
+	height:100%;
+	overflow: scroll;
 }
 
-.AddButton {
-	margin-top: 130px;
-	margin-left:550px;
-	position: absolute;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+.table {
+	text-align:center;
+	table-layout: fixed;
+	width:100%;
+	min-width: 400px;
 }
-.width00shell {
-	width:100px;
+.namecol {
+	width:20%;
+	overflow: scroll;
+	min-width: 100px;
+	text-overflow: ellipsis;
 }
-.UserNamelabel {
-	margin-left: 5%;
+.psswdcol{
+	width:20%;
+	padding-left:3%;
+	overflow: scroll;
+	min-width: 100px;
+	text-overflow: ellipsis;
+}
+.emailcol{
+	width:30%;
+	padding-left:10%;
+	overflow: scroll;
+	min-width: 100px;
+	text-overflow: ellipsis;
+}
+.AddButtonPosition{
+	padding-right:60%;
+	padding-top:80px;
 	
+}
+.AddButton {
+	float:right;
+	font-size: 90%;
+	height: 15%;
+	width: 65%;
+	max-height:60px;
+	min-height:30px;
+	max-width:100px;
+	min-width:60px;
+}
+
+.buttons {
+	margin-left:20%;
+	font-size: 90%;
+	height: 80%;
+	width: 50%;
+	max-height: 90px;
+	min-height: 40px;
+	max-width: 90px;
+	min-width:70px;
+}
+.UpdateComArt {
+	width:85%
+}
+.userControlsGridContainer {
+	display: grid;
+	margin: auto;
+	width: 100%;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 50% 55%;
+	padding-top:18px;
+}
+.UserNamelabelPosition {
+	min-width:100px;
+	max-width:500px;
+}
+
+.UserInput {
+	margin-left:2%;
+	display:inline-block;
+	width: 50%;
+	max-width:300px;
+	min-width:80px;
 }
 
 .WarningLabel {
-	margin-left:35%;
-	font-size: 10px;
+	padding-top:5px;
+	font-size: 70%;
 	color:red;
+	position:absolute;
 }
-.SelectionAreaUsers {
-	border: 5px ;
-	margin-left:5%;
-
-}
-.UpdateButtons	{
-	margin-left:20%;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
-}
-.DeleteButtons {
-	margin-left:20%;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+.UpdatePosition {
+  padding-top:25px;
 }
 
-.ControlsComplainsArticle {
-	margin-left:5%;
-	margin-bottom:10%;
+.deletePosition {
+  padding-top:25px;
 }
 
-.warningLabelComArt {
-	font-size: 10px;
-	color:red;
+.botGridContainer {
+	display: grid;
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+	width: 90%;
+	grid-template-rows: 40px 410px 40px;
+	grid-template-columns: 50% 50%;
 }
 
-.ButtonDelComplArt {
-	margin-top:2%;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+.connectcols1_2 {
+	grid-column: 1 / span 2;
+	grid-row: 1;
 }
 
-.ButtonUpComplArt {
-	margin-top:2%;
-	margin-left:10%;
-	font-size: 15px;
-	height: 40px;
-	width: 90px;
+.widthinput {
+	width:80%;
+}
+.ArticlePadding {
+	margin-left:7%;
 }
 
+.botControlsgridContainer {
+	display: grid;
+	margin: auto;
+	width: 100%;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 40% 25% 15%;
+	padding-top:20px;
+}
+.ArticleGridPadding {
+	padding-left: 8%;
+}
+.buttonsUpdateComArt {
+	padding-top:25px;
+	padding-left:20%;
+}
+
+.buttonsDeleteComArt {
+	padding-top:25px;
+	padding-left:5%;
+	padding-right:10%;
+}
 
