@@ -10,16 +10,20 @@ function checkinput()
 	
 	else
 	{
+		sessionStorage.removeItem('Username');
+		sessionStorage.removeItem("Password");
+		sessionStorage.setItem('Username',username);
+		sessionStorage.setItem("Password", password);
+
 		if(username=="Admin" && password=="DaddyIsHere")
 		{
+			
 			window.location="AdminPage.html";
-			sessionStorage.setItem('Username',username);
-			sessionStorage.setItem("Password", password);
 		}
 	
 		else
 		{
-			window.location="landing-page.html";
+			window.location="index.html";
 		}
 	}
 }
