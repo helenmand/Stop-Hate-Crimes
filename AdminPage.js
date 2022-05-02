@@ -1,8 +1,13 @@
-function getAdminName()
+async function getAdminName()
 {
 	Username=sessionStorage.getItem('Username');
 	Password=sessionStorage.getItem('Password');
-	if (Username=="Admin" && Password=="DaddyIsHere")
+
+	let response = await fetch("./admin.json");
+	let object = await response.json();
+	let admin = object.admin;
+
+	if (Username==admin.name && Password==admin.password)
 	{
 		document.getElementById("AdminName").innerHTML=Username;
 	}

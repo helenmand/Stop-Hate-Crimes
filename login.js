@@ -1,5 +1,9 @@
-function checkinput()
+async function checkinput()
 {
+	let response = await fetch("./admin.json");
+	let object = await response.json();
+	let admin = object.admin;
+
 	username=document.getElementById("usname").value;
 	password=document.getElementById("psword").value;
 	
@@ -15,7 +19,7 @@ function checkinput()
 		sessionStorage.setItem('Username',username);
 		sessionStorage.setItem("Password", password);
 
-		if(username=="Admin" && password=="DaddyIsHere")
+		if(username==admin.name && password==admin.password)
 		{
 			
 			window.location="AdminPage.html";
