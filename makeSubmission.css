@@ -1,7 +1,9 @@
 #postForm {
-    border: 1px solid black;
+    border: 5px solid #647295;
     padding: 1%;
-    margin: 2%;
+    margin-left: 22%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     height: auto;
     width: fit-content;
     display: flex;
@@ -27,5 +29,14 @@
 }
 
 #formSubmitButton {
-    width: fit-content;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    background-color: lightgray;
+}
+
+#formSubmitButton:hover{
+    cursor: pointer;
+    background-color: #647295;
 }
