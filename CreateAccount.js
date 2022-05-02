@@ -8,6 +8,6 @@ function checkUsername()
 	}
 	else
 	{
-		window.location="landing-page.html";
+		window.location="index.html";
 	}
 }
