@@ -16,6 +16,13 @@
 	min-width:600px;
 }
 
+.gridcontainer input[type=text], input[type=password]{
+	padding: 5px;
+	border: 2px solid rgb(189, 189, 189);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
+
 .top {
 	padding-top:10px;
 }
@@ -40,16 +47,21 @@
 }
 
 .buttonposition {
-	padding-left:41%;
-	padding-top:35px;
+	padding-left:45%;
 	grid-column:1 / span 2;
 	grid-row:4;
 }
 
 .ButtonCreate {
-	font-size: 90%;
-	height: 150%;
-	width: 25%;
+	font-size: 110%;
+	height: 50px;
+	width: 80px;
 	max-height:50px;
 	min-width:80px;
+	border-radius: 10%;
+	padding: 10px;
+}
+
+.ButtonCreate:hover {
+	cursor: pointer;
 }
