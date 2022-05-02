@@ -180,3 +180,7 @@ button img{
 #profilePageButton {
     visibility: hidden;
 }
+
+#adminButton {
+    visibility: hidden;
+}
