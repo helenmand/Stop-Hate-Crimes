@@ -6,34 +6,42 @@
 
 .gridcontainer {
 	display: grid;
-	margin-left:20%;
-	margin-right:60%;
-	width: 50%;
-	grid-template-rows: 20px 20px 20px;
-	grid-template-columns:50% 50%;
-	font-size:100%;
-	padding-top:10px;
-	
+	grid-template-columns: auto auto;
+	gap: 10px;
+	padding: 10px;
+}
+
+.gridcontainer input[type=text], input[type=password]{
+	padding: 5px;
+	border: 2px solid rgb(189, 189, 189);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
 }
 
 .labelsposition {
 	padding-right:5%;
 	float:right;
 }
-.top {
-	padding-top:8px;
+
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .loginButtonPosition {
 	grid-column: 1 / span 2;
   	grid-row: 3;
-  	padding-left: 50%;
-  	padding-top:25px;
+  	padding-left: 45%;
+  	padding-top:50px;
 }
+
 .loginButton{
 	font-size: 90%;
 	height: 35px;
 	width: 100px;
+}
+
+.loginButton:hover{
+	cursor: pointer;
 }
 
 .warningLabel{
