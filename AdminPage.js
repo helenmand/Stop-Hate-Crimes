@@ -24,6 +24,10 @@ function UpdateButtonUsers()
 	{
 		document.getElementById("WarningUsername").innerHTML="User Not Exist";
 	}
+	else
+	{
+		window.location="profilepage.html";
+	}
 }
 function UpdateButtonComplains()
 {
@@ -32,6 +36,10 @@ function UpdateButtonComplains()
 	{
 		document.getElementById("WarningComplain").innerHTML="Complain Not Found";
 	}
+	else
+	{
+		window.location="makeSubmission.html";
+	}
 }
 function UpdateButtonArticle()
 {
@@ -39,5 +47,9 @@ function UpdateButtonArticle()
 	if (articleid=="NotExist")
 	{
 		document.getElementById("WarningArticle").innerHTML="Article Not Found";
+	}
+	else
+	{
+		window.location="makeSubmission.html";
 	}
 }
