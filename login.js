@@ -14,10 +14,10 @@ async function checkinput()
 	
 	else
 	{
-		sessionStorage.removeItem('Username');
-		sessionStorage.removeItem("Password");
-		sessionStorage.setItem('Username',username);
-		sessionStorage.setItem("Password", password);
+		sessionStorage.removeItem('username');
+		sessionStorage.removeItem("password");
+		sessionStorage.setItem('username',username);
+		sessionStorage.setItem("password", password);
 
 		if(username==admin.name && password==admin.password)
 		{

@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 	let object = await response.json();
 	let admin = object.admin;
     
-    username=sessionStorage.getItem("Username");
-	password=sessionStorage.getItem("Password");
+    username=sessionStorage.getItem("username");
+	password=sessionStorage.getItem("password");
 
 	if(username==admin.name && password==admin.password)
 	{

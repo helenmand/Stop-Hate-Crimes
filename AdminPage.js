@@ -1,7 +1,7 @@
 async function getAdminName()
 {
-	Username=sessionStorage.getItem('Username');
-	Password=sessionStorage.getItem('Password');
+	Username=sessionStorage.getItem('username');
+	Password=sessionStorage.getItem('password');
 
 	let response = await fetch("./admin.json");
 	let object = await response.json();

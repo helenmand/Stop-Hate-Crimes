@@ -1,4 +1,4 @@
 function logOutAccount() {
-    sessionStorage.removeItem("Username");
-    sessionStorage.removeItem("Password");
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("password");
 }
