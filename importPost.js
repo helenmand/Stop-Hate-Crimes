@@ -27,8 +27,6 @@ function openPost(postid) {
 async function fetchData() {
     let response = await fetch("./post.json");
     let data = await response.json();
-    data = JSON.stringify(data);
-    data = JSON.parse(data);
     return data.post;
 }
 
