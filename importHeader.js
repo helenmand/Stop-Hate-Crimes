@@ -7,8 +7,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 	password=sessionStorage.getItem("Password");
 	
 	if(username=="Admin" && password=="DaddyIsHere")
-		{
-			adminButton = document.getElementById("adminButton");
-			adminButton.style.visibility="visible";
-		}
+	{
+		adminButton = document.getElementById("adminButton");
+		adminButton.style.visibility="visible";
+	}
+	else if (username!=null) {
+		document.getElementById("profilePageButton").style.visibility="visible";
+	}
 });

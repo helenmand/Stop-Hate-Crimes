@@ -176,3 +176,7 @@ button img{
     height: 40px;
     border-radius: 50%;
 }
+
+#profilePageButton {
+    visibility: hidden;
+}
