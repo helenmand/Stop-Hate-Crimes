@@ -22,7 +22,7 @@ async function checkinput()
 		if(username==admin.name && password==admin.password)
 		{
 			
-			window.location="AdminPage.html";
+			window.location="AdminPage.php";
 		}
 	
 		else
