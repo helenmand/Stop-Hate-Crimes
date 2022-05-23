@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 22, 2022 at 09:32 PM
+-- Generation Time: May 23, 2022 at 05:05 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -32,6 +32,18 @@ CREATE TABLE `ARTICLES` (
   `TITLE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `CONTENT` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `COMMENTS`
+--
+
+CREATE TABLE `COMMENTS` (
+  `ID` int(11) NOT NULL,
+  `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `COMMENT` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -78,6 +90,13 @@ ALTER TABLE `ARTICLES`
   ADD KEY `USERNAME` (`USERNAME`);
 
 --
+-- Indexes for table `COMMENTS`
+--
+ALTER TABLE `COMMENTS`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `USERNAME` (`USERNAME`);
+
+--
 -- Indexes for table `COMPLAINTS`
 --
 ALTER TABLE `COMPLAINTS`
@@ -99,6 +118,12 @@ ALTER TABLE `USERS`
 --
 ALTER TABLE `ARTICLES`
   ADD CONSTRAINT `ARTICLES_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `USERS` (`USERNAME`);
+
+--
+-- Constraints for table `COMMENTS`
+--
+ALTER TABLE `COMMENTS`
+  ADD CONSTRAINT `COMMENTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `USERS` (`USERNAME`);
 
 --
 -- Constraints for table `COMPLAINTS`
