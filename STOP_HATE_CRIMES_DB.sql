@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 23, 2022 at 05:05 PM
+-- Generation Time: May 24, 2022 at 10:19 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -68,6 +68,7 @@ CREATE TABLE `COMPLAINTS` (
 CREATE TABLE `USERS` (
   `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `PASSWORD` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `USER_CATEGORIES` varchar(5) NOT NULL,
   `EMAIL` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -75,8 +76,8 @@ CREATE TABLE `USERS` (
 -- Dumping data for table `USERS`
 --
 
-INSERT INTO `USERS` (`USERNAME`, `PASSWORD`, `EMAIL`) VALUES
-('admin', 'adminP', 'admin@gmail.com');
+INSERT INTO `USERS` (`USERNAME`, `PASSWORD`, `USER_CATEGORIES`, `EMAIL`) VALUES
+('admin', 'adminP', 'admin', 'admin@gmail.com');
 
 --
 -- Indexes for dumped tables
