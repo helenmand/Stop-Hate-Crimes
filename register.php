@@ -17,8 +17,6 @@ $username = mysqli_real_escape_string($conn, $_POST['usname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['psword']);
 
-#$sql = mysqli_query($conn,"SELECT * FROM users where EMAIL='$email'");
-
 # Checking that the user is unique
 
 $user_check_query = "SELECT * FROM users WHERE username = '$username' or email = '$email' LIMIT 1";

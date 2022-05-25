@@ -11,6 +11,9 @@
             <?php include "header.php";?>
         </div>
 		<h1 class="headerCreateAccount">Create Account</h1>
+
+		<form action="register.php" method="post" enctype="multipart/form-data">
+			
 		<div class="gridcontainer">
 			<div class="leftposition">
 				<label for="username">Username:</label><br>
