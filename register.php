@@ -1,7 +1,7 @@
 <?php
 extract($_POST);
 $errors = array()
-include("database.php");
+<?php include 'database.php';?>
 
 # Connect to the db
 $conn = mysqli_connect("127.0.0.1", "admin", "adminsPW");
@@ -16,8 +16,6 @@ if (!$conn) {
 $username = mysqli_real_escape_string($conn, $_POST['usname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['psword']);
-
-#$sql = mysqli_query($conn,"SELECT * FROM users where EMAIL='$email'");
 
 # Checking that the user is unique
 

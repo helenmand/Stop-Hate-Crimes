@@ -15,7 +15,7 @@
                 <a href="feed.php"><li class="bn1">Feed</li></a>
                 <a href="makeSubmission.php"><li class="bn1">Submission</li></a>
                 <a href="./login.php"><li class="bn1">Login</li></a>
-                <a href="CreateAccount.php"><li class="bn1">Sign Up</li></a>
+                <a href="createAccount.php"><li class="bn1">Sign Up</li></a>
             </div>
             <div class="text">
                 <p id="welcomeText"></p>
