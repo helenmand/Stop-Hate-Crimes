@@ -1,7 +1,7 @@
 <?php
 extract($_POST);
 $errors = array()
-include("database.php");
+<?php include 'database.php';?>
 
 # Connect to the db
 $conn = mysqli_connect("127.0.0.1", "admin", "adminsPW");
