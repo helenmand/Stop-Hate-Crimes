@@ -26,8 +26,7 @@
             <div class="PVB">
                 <?php include "post-navigation-bar.php"?>
             </div>
-            <div class="postL" id="postList">
-            </div>
+            <div class="postL" id="postList"></div>
         </div>
     </body>
 </html>

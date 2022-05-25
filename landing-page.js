@@ -6,6 +6,5 @@ function writeWelcomeText() {
     } else {
         welcomeText = "Welcome to our website " + username + "!<br> This is a safe space ";
     }
-    console.log("cunt");
     document.getElementById("welcomeText").innerHTML = welcomeText;
 }
