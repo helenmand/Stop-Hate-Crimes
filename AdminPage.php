@@ -13,7 +13,7 @@
 				<label class="Userslabel">Users</label>
 			</div>
 			<div class="landingPageButtonPosition">
-				<a href="index.html"><input class="landingPageButton" type="submit" value="Landing Page"></a>
+				<a href="index.php"><input class="landingPageButton" type="submit" value="Landing Page"></a>
 			</div>
 			<div class="DataUser">
 				<table class="table">
@@ -63,7 +63,7 @@
 				</table>
 			</div>
 			<div class="AddButtonPosition">
-				<a href="CreateAccount.html"><input class="AddButton" type="submit" value="Add"></a>
+				<a href="CreateAccount.php"><input class="AddButton" type="submit" value="Add"></a>
 			</div>
 			<div class="userControlsGridContainer">
 				<div class="connectcols1_2 UserNamelabelPosition">
@@ -123,7 +123,7 @@
 					<label class="WarningLabel" id="WarningComplain"></label>
 				</div>
 				<div>
-					<a href="makeSubmission.html"><input class="buttons" type="submit" value="Add"></a>
+					<a href="makeSubmission.php"><input class="buttons" type="submit" value="Add"></a>
 				</div>
 				<div class="buttonsDeleteComArt">
 					<input class="buttons " type="submit" value="Delete">
@@ -139,7 +139,7 @@
 						<label class="WarningLabel" id="WarningArticle"></label>
 					</div>
 					<div>
-						<a href="makeSubmission.html"><input class="buttons" type="submit" value="Add"></a>
+						<a href="makeSubmission.php"><input class="buttons" type="submit" value="Add"></a>
 					</div>
 					<div class="buttonsDeleteComArt">
 						<input class="buttons" type="submit" value="Delete">

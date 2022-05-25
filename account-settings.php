@@ -3,11 +3,12 @@
     <head>
         <title>Stop Hate Crimes</title>
         <link rel="stylesheet" href="./account-settings.css">
-        <script src="./importHeader.js"></script>
         <script src="./account-settings.js"></script>
     </head>
     <body>
-        <div id="importHeader"></div>
+        <div>
+            <?php include "header.php";?>
+        </div>
         <div class="settings-header">
             <h2>Account Settings</h2>
         </div>
@@ -45,7 +46,7 @@
             </div>
         </div>
         <div class="logout-button">
-            <a href="index.php" class="bn2-logout" onclick="logOutAccount();">Log out</a>
+            <a href="index.html" class="bn2-logout" onclick="logOutAccount();">Log out</a>
         </div>
     </body>
 </html>

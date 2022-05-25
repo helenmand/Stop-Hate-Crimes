@@ -27,7 +27,7 @@ async function checkinput()
 	
 		else
 		{
-			window.location="index.html";
+			window.location="index.php";
 		}
 	}
 }
