@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./post-navigation-bar.css">
         <script src="landing-page.js"></script>
         <script src="./post-navigation-bar.js"></script>
+        <script src="post.js"></script>
     </head>
     <body>
         <div class="landing-page-header">

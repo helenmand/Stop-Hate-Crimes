@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="logout-button">
-            <a href="index.html" class="bn2-logout" onclick="logOutAccount();">Log out</a>
+            <a href="logOutAction.php" class="bn2-logout" onclick="logOutAccount();">Log out</a>
         </div>
     </body>
 </html>

@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="profilepage.css">
     <link rel="stylesheet" href="./post.css">
     <link rel="stylesheet" href="./post-navigation-bar.css">
+    <script src="post.js"></script>
+    <script src="./post-navigation-bar.js"></script>
     </head>
   <body>
     <div>
