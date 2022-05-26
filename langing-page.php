@@ -11,13 +11,15 @@
         <div class="landing-page-header">
             <div class="wrapper">
                 <a href="feed.php"><li class="bn1">Feed</li></a>
-                <a href="makeSubmission.php"><li class="bn1">Submission</li></a>
                 <?php
                     if(!isset($_COOKIE["user"])) {
                         echo "<a href=\"./login.php\"><li class=\"bn1\">Login</li></a>";
+                        echo "<a href=\"createAccount.php\"><li class=\"bn1\">Sign Up</li></a>";
+                    } else {
+                        echo "<a href=\"makeSubmission.php\"><li class=\"bn1\">Submission</li></a>";
                     }
                 ?>
-                <a href="createAccount.php"><li class="bn1">Sign Up</li></a>
+                
             </div>
             <div class="text">
                 <p id="welcomeText"></p>

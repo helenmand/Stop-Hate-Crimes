@@ -2,7 +2,7 @@
 echo
 "<div class=\"post\">
     <div class=\"postUser\">
-        <a>
+        <a class=\"postUserLink\" href=\"profilepage.php?user=".$usertext."\">
             ".$usertext."
         </a>
     </div>
