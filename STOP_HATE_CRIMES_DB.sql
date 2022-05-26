@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 24, 2022 at 10:19 PM
+-- Generation Time: May 26, 2022 at 05:28 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -41,9 +41,21 @@ CREATE TABLE `ARTICLES` (
 --
 
 CREATE TABLE `COMMENTS` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) UNSIGNED NOT NULL,
   `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `COMMENT` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `COMMENT` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ARTICLE_ID` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `COMMENTS_ON_COMMENTS`
+--
+
+CREATE TABLE `COMMENTS_ON_COMMENTS` (
+  `COMMENTS` int(11) UNSIGNED NOT NULL,
+  `FOLLOWS` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -56,7 +68,8 @@ CREATE TABLE `COMPLAINTS` (
   `ID` int(10) UNSIGNED NOT NULL,
   `TITLE` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `CONTENT` varchar(200) DEFAULT NULL
+  `CONTENT` varchar(200) DEFAULT NULL,
+  `DATE` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -95,7 +108,15 @@ ALTER TABLE `ARTICLES`
 --
 ALTER TABLE `COMMENTS`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `USERNAME` (`USERNAME`);
+  ADD KEY `USERNAME` (`USERNAME`),
+  ADD KEY `ARTICLE_ID` (`ARTICLE_ID`);
+
+--
+-- Indexes for table `COMMENTS_ON_COMMENTS`
+--
+ALTER TABLE `COMMENTS_ON_COMMENTS`
+  ADD KEY `COMMENTS` (`COMMENTS`),
+  ADD KEY `FOLLOWS` (`FOLLOWS`);
 
 --
 -- Indexes for table `COMPLAINTS`
@@ -124,7 +145,15 @@ ALTER TABLE `ARTICLES`
 -- Constraints for table `COMMENTS`
 --
 ALTER TABLE `COMMENTS`
-  ADD CONSTRAINT `COMMENTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `USERS` (`USERNAME`);
+  ADD CONSTRAINT `COMMENTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `USERS` (`USERNAME`),
+  ADD CONSTRAINT `COMMENTS_ibfk_2` FOREIGN KEY (`ARTICLE_ID`) REFERENCES `ARTICLES` (`ID`);
+
+--
+-- Constraints for table `COMMENTS_ON_COMMENTS`
+--
+ALTER TABLE `COMMENTS_ON_COMMENTS`
+  ADD CONSTRAINT `COMMENTS_ON_COMMENTS_ibfk_1` FOREIGN KEY (`COMMENTS`) REFERENCES `COMMENTS` (`ID`),
+  ADD CONSTRAINT `COMMENTS_ON_COMMENTS_ibfk_2` FOREIGN KEY (`FOLLOWS`) REFERENCES `COMMENTS` (`ID`);
 
 --
 -- Constraints for table `COMPLAINTS`

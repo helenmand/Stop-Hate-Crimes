@@ -1,11 +1,13 @@
-
+l
 <?php
     if(isset($_POST['username']) and isset($_POST['password']))
     {
 
         $servername = "127.0.0.1";
-        $username = "admin";
-        $password = "adminsPW";
+        $username = "LoginUsers";
+        $password = "LogUsSHC";
+        //$username = "NotLoginUsers";
+        //$password = "NLogUsSHC";
         $dbname = "STOP_HATE_CRIMES_DB";
 
         $conn = @mysqli_connect($servername, $username, $password);
