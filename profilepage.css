@@ -84,8 +84,7 @@
     border-style: double;
     width: fit-content;
     border-color: #647295;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding: 1em;
     border-radius: 10%;
 }
 

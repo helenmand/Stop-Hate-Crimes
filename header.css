@@ -178,10 +178,10 @@ button img{
     border-radius: 50%;
 }
 
-#profilePageButton {
+#adminButton {
     visibility: hidden;
 }
 
-#adminButton {
+.hidden {
     visibility: hidden;
 }

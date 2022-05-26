@@ -21,10 +21,13 @@
         $select = mysqli_fetch_array($results);
 
         if (isset($select)) {
+            setcookie("user", $_POST['username']);
             if ($select['USER_CATEGORIES']=='admin'){
+                setcookie("user_category", "admin");
                 header("Location:./AdminPage.php");
             }
             else{
+                setcookie("user_category", "user");
                 header("Location:./index.php");
             }
 
