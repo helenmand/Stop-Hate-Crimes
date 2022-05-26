@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="AdminPage.css"/>
 		<script src="AdminPage.js"></script>
 	</head>
-	<body onLoad="getAdminName();">
+	<body>
 		<h3 class="AdminName" id="AdminName"></h3>
 		<div class="topGridContainer">
 			<div class="UserlabelPosition">
@@ -44,7 +44,7 @@
 							$servername = "127.0.0.1";
 							$username = "admin";
 							$password = "adminsPW";
-							$dbname = "Database";
+							$dbname = "STOP_HATE_CRIMES_DB";
 							
 							$conn = @mysqli_connect($servername, $username, $password);
 							if (!$conn) {
