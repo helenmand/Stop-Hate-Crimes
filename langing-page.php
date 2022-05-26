@@ -5,8 +5,6 @@
         <link rel="stylesheet" href="./post.css">
         <link rel="stylesheet" href="./post-navigation-bar.css">
         <script src="landing-page.js"></script>
-        <script src="./importPost.js"></script>
-        <script>importRandomPosts(3)</script>
         <script src="./post-navigation-bar.js"></script>
     </head>
     <body>
@@ -26,7 +24,22 @@
             <div class="PVB">
                 <?php include "post-navigation-bar.php"?>
             </div>
-            <div class="postL" id="postList"></div>
+            <div class="postL" id="postList">
+            <?php
+                $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC");
+                $sqlQuery = "SELECT * FROM articles LIMIT 10";
+                @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
+                $results = mysqli_query($conn, $sqlQuery);
+
+                while($row = mysqli_fetch_array($results)) {
+                    $usertext = $row["USERNAME"];
+                    $titletext = $row["TITLE"];
+                    $bodytext = $row["CONTENT"];
+                    $postid = $row["ID"];
+                    include("post.php");
+                }
+            ?>
+            </div>
         </div>
     </body>
 </html>
