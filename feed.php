@@ -17,7 +17,7 @@
             <div id="postList">
                 <?php
 
-                    $conn = @mysqli_connect("localhost", "admin", "adminsPW");
+                    $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC");
                     $sqlQuery = "SELECT * FROM articles LIMIT 10";
                     @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
                     $results = mysqli_query($conn, $sqlQuery);

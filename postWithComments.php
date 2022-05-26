@@ -14,7 +14,7 @@
         <div id="postWithComments">
             <div>
                 <?php
-                    $conn = @mysqli_connect("localhost", "admin", "adminsPW");
+                    $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC");
                     $sqlQuery = "SELECT * FROM articles WHERE ID =".$_GET["postid"];
                     @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
                     $results = mysqli_query($conn, $sqlQuery);
@@ -30,6 +30,5 @@
             </div>
             <div id="commentList"></div>
         </div>
-        
     </body>
 </html>
