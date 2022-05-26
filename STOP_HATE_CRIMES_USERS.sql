@@ -1,11 +1,15 @@
-# Privileges for `LoginUsers`@`%`
+# Privileges for `LoginUsers`@`localhost`
 
-GRANT SELECT, INSERT, UPDATE ON *.* TO `LoginUsers`@`%` IDENTIFIED BY PASSWORD '*EDEBFEB00024A86B4D3DF62D4E5135628C259E0F';
+GRANT USAGE ON *.* TO `LoginUsers`@`localhost` IDENTIFIED BY PASSWORD '*EDEBFEB00024A86B4D3DF62D4E5135628C259E0F';
+
+GRANT SELECT, INSERT, UPDATE ON `STOP_HATE_CRIMES_DB`.* TO `LoginUsers`@`localhost`;
 
 
-# Privileges for `NotLoginUsers`@`%`
+# Privileges for `NotLoginUsers`@`localhost`
 
-GRANT SELECT ON *.* TO `NotLoginUsers`@`%` IDENTIFIED BY PASSWORD '*8CAE839D3D75AEC5A6D95ECF790C18242BC4D0D5';
+GRANT USAGE ON *.* TO `NotLoginUsers`@`localhost` IDENTIFIED BY PASSWORD '*8CAE839D3D75AEC5A6D95ECF790C18242BC4D0D5';
+
+GRANT SELECT ON `STOP_HATE_CRIMES_DB`.* TO `NotLoginUsers`@`localhost`;
 
 
 # Privileges for `admin`@`%`
