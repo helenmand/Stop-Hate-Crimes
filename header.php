@@ -17,7 +17,7 @@
             </div>
             <div class="header-right">
                 <a>
-                    <form id="form"> 
+                    <form id="form" action="searchResult.php"> 
                         <input type="search" id="query" name="q" placeholder="Search...">
                         <button type="submit">
                             <img src="images\search-icon.png">
