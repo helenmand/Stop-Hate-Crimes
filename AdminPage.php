@@ -1,3 +1,8 @@
+<?php
+    if (!isset($_COOKIE['user_category']) and $_COOKIE['user_category']!='admin'){
+        header("Location:./index.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +12,9 @@
 		<script src="AdminPage.js"></script>
 	</head>
 	<body>
-		<h3 class="AdminName" id="AdminName"></h3>
+        <?php
+            echo "<h3 class='AdminName' id='AdminName'>".$_COOKIE['user']."</h3>";
+        ?>
 		<div class="topGridContainer">
 			<div class="UserlabelPosition">
 				<label class="Userslabel">Users</label>
@@ -29,35 +36,14 @@
 						</th>
 					</tr>
 					<tr>
-						<td class="namecol">
-							admin
-						</td>
-						<td class="psswdcol">
-							admin
-						</td>
-						<td class="emailcol">
-							admin@gmail.com
-						</td>
-					</tr>
-					<tr>
 						<?php
-							$servername = "127.0.0.1";
-							$username = "admin";
-							$password = "adminsPW";
-							$dbname = "STOP_HATE_CRIMES_DB";
-							
-							$conn = @mysqli_connect($servername, $username, $password);
-							if (!$conn) {
-	  							die("Connection failed: " . $conn->connect_error);
-							}
-							$sql = "SELECT * FROM USERS";
+							include("AdminsConnection.php");
+							$sql = "SELECT `USERNAME`, `PASSWORD`, `EMAIL` FROM users";
 							$result = @mysqli_select_db($conn, $dbname);
 							$results = mysqli_query($conn, $sql);
 							while ($row = mysqli_fetch_array($results)){
-								echo "<td class='namecol'>" . $row["USERNAME"] . "</td><td class='psswdcol'>" . $row["PASSWORD"] . "</td><td class='emailcol'>" . $row["EMAIL"] . "</td>";    
+								echo "<tr><td class='namecol'>" . $row["USERNAME"] . "</td><td class='psswdcol'>" . $row["PASSWORD"] . "</td><td class='emailcol'>" . $row["EMAIL"] . "</td></tr>";
 	 						}
-							mysqli_free_result($results);
-	  						mysqli_close($conn);
 						?>
 					</tr>
 				</table>
@@ -99,6 +85,14 @@
 							User
 						</th>
 					</tr>
+						<?php
+							$sql = "SELECT `ID`, `TITLE`, `USERNAME` FROM `complaints`;";
+							$result = @mysqli_select_db($conn, $dbname);
+							$results = mysqli_query($conn, $sql);
+							while ($row = mysqli_fetch_array($results)){
+								echo "<tr><td class='namecol'>" . $row["ID"] . "</td><td class='psswdcol'>" . $row["TITLE"] . "</td><td class='emailcol'>" . $row["USERNAME"] . "</td></tr>";
+	 						}
+						?>
 				</table>
 			</div>
 			<div class="DataUser ArticlePadding">
@@ -113,6 +107,16 @@
 						<th class="emailcol">
 							User
 						</th>
+						<?php
+							$sql = "SELECT `ID`, `TITLE`, `USERNAME` FROM `articles`;";
+							$result = @mysqli_select_db($conn, $dbname);
+							$results = mysqli_query($conn, $sql);
+							while ($row = mysqli_fetch_array($results)){
+								echo "<tr><td class='namecol'>" . $row["ID"] . "</td><td class='psswdcol'>" . $row["TITLE"] . "</td><td class='emailcol'>" . $row["USERNAME"] . "</td></tr>";
+	 						}
+							mysqli_free_result($results);
+	  						mysqli_close($conn);
+						?>
 					</tr>
 				</table>
 			</div>
