@@ -15,7 +15,7 @@
             <div class="header-center">
                 <?php 
                     if(isset($_COOKIE["user_category"])) {
-                        if(strcmp($_COOKIE["user_category"], "admin"))
+                        if(strcmp($_COOKIE["user_category"], "admin") == 0)
                             echo "<a class=\"bn1\" href=\"AdminPage.php\" id=\"adminButton\">Admin Page</a>";
                     }
                 ?>
