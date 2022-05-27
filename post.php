@@ -15,7 +15,7 @@ echo
         </a>
     </div>
     <div class=\"postButtons\">
-        <button class=\"postReplyButton bn1\">
+        <button class=\"postReplyButton bn1\" onclick=\"openReply(".$postid.");\">
             Reply
         </button>
         <button class=\"postViewCommentsButton bn1\" onclick=\"openPost(".$postid.");\">
