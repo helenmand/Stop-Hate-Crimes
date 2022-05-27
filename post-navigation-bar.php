@@ -11,6 +11,12 @@
                 if (isset($_GET["pvbcontent"])) {
                     $currentUrl.="&pvbcontent=".$_GET["pvbcontent"];
                 }
+                if(isset($_GET["user"])) {
+                    $currentUrl.="&user=".$_GET["user"]; 
+                }
+                if(isset($_GET["q"])) {
+                    $currentUrl.="&q=".$_GET["q"]; 
+                }
                 return $currentUrl;
             }
 
@@ -18,6 +24,12 @@
                 $currentUrl = substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], "?"))."?pvbcontent=".$content;
                 if (isset($_GET["pvbregion"])) {
                     $currentUrl.="&pvbregion=".$_GET["pvbregion"];
+                }
+                if(isset($_GET["user"])) {
+                    $currentUrl.="&user=".$_GET["user"]; 
+                }
+                if(isset($_GET["q"])) {
+                    $currentUrl.="&q=".$_GET["q"]; 
                 }
                 return $currentUrl;
             }
