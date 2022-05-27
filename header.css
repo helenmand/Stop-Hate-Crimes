@@ -178,10 +178,6 @@ button img{
     border-radius: 50%;
 }
 
-#adminButton {
-    visibility: hidden;
-}
-
 .hidden {
     visibility: hidden;
 }
