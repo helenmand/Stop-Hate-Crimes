@@ -14,11 +14,11 @@
     <div class="profile">
       <div id="profile-upper">
         <div id="profile-banner-image">
-          <img src="https://wallpapercave.com/wp/wp7671629.png" alt="Banner image">
+          <img src=<?php echo "\"./images/".$_GET["user"]."_bg.png\"";?> alt="Banner image">
         </div>
         <div id="profile-i">
           <div id="profile-pic">
-            <img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg" als="Profile Picture">
+            <img src=<?php echo "\"./images/".$_GET["user"]."_pfp.png\"";?> als="Profile Picture">
           </div>
           <div class="container">
             <div id="username"><?php echo $_GET["user"]?></div>

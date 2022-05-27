@@ -28,8 +28,35 @@
             </div>
             <div id="commentList">
                 <?php
+
+                    function produceReply($parentid, $conn) {
+                        $sqlQuery = "SELECT * FROM `comments_on_comments` INNER JOIN comments ON follows = comments.id WHERE COMMENTS =".$parentid ;
+                        $results = mysqli_query($conn, $sqlQuery);
+
+                        while($row = mysqli_fetch_array($results)) {
+                            echo
+                            "<div class=\"comment\">
+                            <div class=\"commentUser\">
+                                <a class=\"commentUserLink\" href=\"profilepage.php?user=".$row["USERNAME"]."\"> ".$row["USERNAME"]."</a>
+                            </div>
+                            <div class=\"commentBody\">
+                                <a>".$row["COMMENT"]."</a>
+                            </div>
+                            <div class=\"commentButtons\">
+                                <button class=\"commentReplyButton bn2\">Reply</button>
+                            </div>
+                            <div class=\"commentReply\">";
+
+                            produceReply($row["ID"], $conn);
+
+                            echo
+                                "</div>
+                            </div>";
+                        }
+                    }
+
                     $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC");
-                    $sqlQuery = "SELECT * FROM comments WHERE ARTICLE_ID =".$_GET["postid"];
+                    $sqlQuery = "SELECT * FROM comments WHERE ARTICLE_ID =".$_GET["postid"]." AND ID NOT IN (SELECT FOLLOWS FROM comments_on_comments)";
                     @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
                     $results = mysqli_query($conn, $sqlQuery);
 
@@ -46,6 +73,9 @@
                                 <button class=\"commentReplyButton bn2\">Reply</button>
                             </div>
                             <div class=\"commentReply\">";
+                        
+
+                        produceReply($row["ID"], $conn);
 
                         echo
                             "</div>
