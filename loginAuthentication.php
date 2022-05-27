@@ -16,7 +16,7 @@ l
         }
 
         //$sql="SELECT `USERNAME` FROM `USERS` WHERE `USERNAME` = "."'".$_POST['username']."';";
-        $sql="SELECT `USERNAME`, `USER_CATEGORIES` FROM `USERS` WHERE `USERNAME`='".$_POST['username']."' AND `PASSWORD`='".$_POST['password']."';";
+        $sql="SELECT `USERNAME`, `USER_CATEGORIES` FROM `users` WHERE `USERNAME`='".$_POST['username']."' AND `PASSWORD`='".$_POST['password']."';";
 
         $result = @mysqli_select_db($conn, $dbname);
         $results = mysqli_query($conn, $sql);
