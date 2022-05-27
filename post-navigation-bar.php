@@ -6,7 +6,6 @@
     </head>
     <body>
         <div class="post-header">
-            <a href="/trending/" class="bn2">Trending</a>
             <div class="dropdown">
                 <a class="bn2" id="regionDropdownButton">Thessaloniki</a>
                 <div class="dropdown-content">
@@ -18,10 +17,10 @@
             </div>
             <div class="buttons-right">
                 <div class="dropdown">
-                    <a class="bn2">▼</a>
+                    <a class="bn2">All</a>
                     <div class="dropdown-content">
-                        <a href="#">Top</a>
-                        <a href="#">Latest</a>
+                        <a href="#">Articles</a>
+                        <a href="#">Complaints</a>
                     </div>
                 </div>
             </div>
