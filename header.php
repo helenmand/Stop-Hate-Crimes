@@ -13,7 +13,13 @@
                 </button>
             </a>
             <div class="header-center">
-                <a class="bn1" href="AdminPage.php" id="adminButton">Admin Page</a>
+                <?php 
+                    if(isset($_COOKIE["user_category"])) {
+                        if(strcmp($_COOKIE["user_category"], "admin"))
+                            echo "<a class=\"bn1\" href=\"AdminPage.php\" id=\"adminButton\">Admin Page</a>";
+                    }
+                ?>
+                
             </div>
             <div class="header-right">
                 <a>
