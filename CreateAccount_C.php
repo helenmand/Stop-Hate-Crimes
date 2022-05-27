@@ -3,19 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CreateAccount.css">
+        <script src="./importHeader.js"></script>
         <script src="./CreateAccount.js"></script>
         <title>Stop Hate Crimes</title>
 	</head>
 	<body>
-		<div>
-            <?php include "header.php";?>
-        </div>
+		<div id="importHeader"></div>
 		<h1 class="headerCreateAccount">Create Account</h1>
-
-		<form action="register.php" method="post" enctype="multipart/form-data">
-			
 		<div class="gridcontainer">
 			<div class="leftposition">
+
+			<form action="register.php" method="post" enctype="multipart/form-data"> <!-- Added -->
+
 				<label for="username">Username:</label><br>
 				<input type="text" id="username" name="usname"><br>
 				<label class="warninglabel" id="warningUsername"></label>
@@ -37,11 +36,6 @@
 		</div>
 		<div class="buttonposition">
 			<input class="ButtonCreate" type="submit" id="buttonCreate" value="Create" onclick="checkUsername()">
-			<?php
-				if(isset($_GET["error"])){
-					echo "<label class='warningLabel' id='warningOutput'>Error</label>";
-				}
-			?>
 		</div>
 	</body>
 </html>

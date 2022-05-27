@@ -1,33 +1,52 @@
 <?php
 extract($_POST);
-$errors = array()
-<?php include 'database.php';?>
+$errors = array();
 
 # Connect to the db
-$conn = mysqli_connect("127.0.0.1", "admin", "adminsPW");
+
+$conn = mysqli_connect('127.0.0.1', 'LoginUsers', 'LogUsSHC');
+$dbname = 'STOP_HATE_CRIMES_DB';
 
 if (!$conn) {
     echo "1";
     die("Connection failed: " . $conn->connect_error);
 }
 
+# data base connection IDK PAL
+$dbconn = @mysqli_select_db($conn, $dbname);
+
 # Add data to the vars
 
 $username = mysqli_real_escape_string($conn, $_POST['usname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
-$password = mysqli_real_escape_string($conn, $_POST['psword']);
+$password_1 = mysqli_real_escape_string($conn, $_POST['psword']);
+$password_2 = mysqli_real_escape_string($conn, $_POST['repeatpsword']);
 
-# Checking that the user is unique
+# Checking that the user is unique, plus that passwords match
 
-$user_check_query = "SELECT * FROM users WHERE username = '$username' or email = '$email' LIMIT 1";
-$results = mysqli_query($conn, $user_check_query);
-$user = mysqli_fetch_assoc($results);
-
-if ($user){
-    if ($user['username'] === $username){array_push($errors, "Username already exists.");}
-    if ($user['email'] === $email){array_push($errors, "Email already exists.");}
+$sql=mysqli_query($conn,"SELECT * FROM users where EMAIL='$email'");
+if(mysqli_num_rows($sql)>0)
+{
+    echo "Email Id Already Exists"; 
+	exit;
 }
 
+$sql_2=mysqli_query($conn,"SELECT * FROM users where USERNAME='$username'");
+if(mysqli_num_rows($sql_2)>0)
+{
+    echo "Username Id Already Exists"; 
+	exit;
+}
+
+if ($password_1 != $password_2)
+{
+    echo "Passwords do not match";
+    exit;
+}
+else
+{
+    $password = $password_1;
+}
 # User registration
 
 if (count($errors == 0)){
@@ -37,8 +56,8 @@ if (count($errors == 0)){
     mysqli_query($conn, $query);
 
     $_SESSION['username'] = $username;
-    $_SESSION['success'] = "You are now logged in!";
+    $_SESSION['success'] = 'You are now logged in!';
 
-    header('location: index.php')
-}
+    header('location: index.php');
+    }
 ?>
