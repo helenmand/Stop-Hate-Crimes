@@ -40,7 +40,7 @@
                 ?>
                 >
                     <button>
-                        <img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg">
+                        <img src=<?php echo "\"./images/".$_COOKIE["user"]."_pfp.png\"";?>>
                     </button>
                 </a>
             </div>
