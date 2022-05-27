@@ -23,12 +23,14 @@
           <div class="container">
             <div id="username"><?php echo $_GET["user"]?></div>
             <?php 
-              if(strcmp($_COOKIE["user"], $_GET["user"]) == 0) {
-                echo "<a href=\"account-settings.php\">
-                  <button class=\"btn\">
-                    <img src=\"https://s1.qwant.com/thumbr/0x380/9/e/b0c07453e395b4a1641f0f1c298c27d8f816ab94091223ab1c4ae13d0f43a3/setting.png?u=https%3A%2F%2Ffiles.softicons.com%2Fdownload%2Ftoolbar-icons%2Fmono-general-icons-2-by-custom-icon-design%2Fpng%2F512x512%2Fsetting.png&q=0&b=1&p=0&a=0\">
-                  </button>
-                </a>";
+              if(isset($_COOKIE["user"]) && isset($_GET["user"])) {
+                if(strcmp($_COOKIE["user"], $_GET["user"]) == 0) {
+                  echo "<a href=\"account-settings.php\">
+                    <button class=\"btn\">
+                      <img src=\"https://s1.qwant.com/thumbr/0x380/9/e/b0c07453e395b4a1641f0f1c298c27d8f816ab94091223ab1c4ae13d0f43a3/setting.png?u=https%3A%2F%2Ffiles.softicons.com%2Fdownload%2Ftoolbar-icons%2Fmono-general-icons-2-by-custom-icon-design%2Fpng%2F512x512%2Fsetting.png&q=0&b=1&p=0&a=0\">
+                    </button>
+                  </a>";
+                }
               }
             ?>
           </div> 
