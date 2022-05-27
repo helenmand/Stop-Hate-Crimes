@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="makeSubmission.css">
+        <link rel="stylesheet" href="makeReply.css">
     </head>
     <body>
         <div>
