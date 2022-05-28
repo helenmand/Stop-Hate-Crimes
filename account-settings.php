@@ -42,8 +42,8 @@
                 
                     <?php
                         $img_src = "./images/default_pfp.png";
-                        if (file_exists("\"./images/".$_COOKIE["user"]."_pfp.png\"")){
-                            $img_src = "\"./images/".$_COOKIE["user"]."_pfp.png\"";
+                        if (file_exists("./images/".$_COOKIE["user"]."_pfp.png")){
+                            $img_src = "./images/".$_COOKIE["user"]."_pfp.png";
                         }
                     ?>
 
