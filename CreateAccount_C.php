@@ -13,7 +13,7 @@
 		<div class="gridcontainer">
 			<div class="leftposition">
 
-			<form action="register.php" method="post" enctype="multipart/form-data"> <!-- Added -->
+			<form action="registerC.php" method="post" enctype="multipart/form-data"> <!-- Added -->
 
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="usname"><br>

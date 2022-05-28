@@ -1,6 +1,6 @@
 <?php
 $errors=0;
-# Connect to the db
+# Connect to the database
 
 $conn = mysqli_connect('127.0.0.1', 'LoginUsers', 'LogUsSHC');
 $dbname = 'STOP_HATE_CRIMES_DB';
