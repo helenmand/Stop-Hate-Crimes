@@ -1,23 +1,29 @@
 <?php
     if($_POST['submit']=="submit")
     {
-        include("loginUsersConnection.php");
+        if($_COOKIE['user_category']=="user"){
 
-        //UPDATE `users` SET `USERNAME`='spiros09',`PASSWORD`='allakse',`EMAIL`='spiros09@gmail.com' WHERE `USERNAME`='spiros09';
-        $sql="UPDATE `users` SET `USERNAME`='".$_POST['Usname']."',`PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_COOKIE['user']."';";
+            include("loginUsersConnection.php");
+
+            $sql="UPDATE `users` SET `USERNAME`='".$_POST['Usname']."',`PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_COOKIE['user']."';";
+
+        }
+        else{
+
+            include("AdminsConnection.php");
+            session_start();
+
+            $sql="UPDATE `users` SET `USERNAME`='".$_POST['Usname']."',`PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_SESSION['us_pw_em']['USERNAME']."';";
+        }
 
         if ($conn->query($sql) === TRUE) {
             if($_COOKIE['user_category']=="user"){
-                header("Location:./account-settings.php");
+                header("Location:./account-settings.php");// h sthn profile
             }
-            else{
+            else {
                 header("Location:./AdminPage.php");
             }
-        } else {
-            header("Location:./account-settings.php");
         }
-    }
-    else{
-        header("Location:./account-settings.php");
+
     }
 ?>

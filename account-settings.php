@@ -13,7 +13,6 @@
         }
         else{
             $usersRes=$_SESSION['us_pw_em'];
-            session_destroy();
         }
     }
 ?>

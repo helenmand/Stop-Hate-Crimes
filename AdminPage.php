@@ -55,7 +55,11 @@
                 <div class="userControlsGridContainer">
                     <div class="connectcols1_2 UserNamelabelPosition">
                         <label>Username</label><input class="UserInput" type="text" id="Username" name="username" Placeholder="User name"/><br>
-                        <label class="WarningLabel" id="WarningUsername" ></label>
+                        <?php
+                            if(isset($_GET["error"]) and ($_GET["error"]=="1")){
+                                echo "<label class='WarningLabel' id='WarningUsername' >Username not exists</label>";
+                            }
+                        ?>
                     </div>
 
                     <div class="deletePosition">
