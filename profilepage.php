@@ -16,8 +16,8 @@
         <div id="profile-banner-image">
           <?php
             $img_src = "./images/default_bg.jpg";
-            if (file_exists("\"./images/".$_GET["user"]."_bg.png\"")){
-              $img_src = "\"./images/".$_GET["user"]."_bg.png\"";
+            if (file_exists("./images/".$_GET["user"]."_bg.png")){
+              $img_src = "./images/".$_GET["user"]."_bg.png";
             }
           ?>
           <img src=<?php echo $img_src;?> alt="Banner image">
@@ -26,8 +26,8 @@
           <div id="profile-pic">
           <?php
             $img_src = "./images/default_pfp.png";
-            if (file_exists("\"./images/".$_GET["user"]."_pfp.png\"")){
-              $img_src = "\"./images/".$_GET["user"]."_pfp.png\"";
+            if (file_exists("./images/".$_GET["user"]."_pfp.png")){
+              $img_src = "./images/".$_GET["user"]."_pfp.png";
             }
           ?>
           <img src=<?php echo $img_src;?> als="Profile Picture">
