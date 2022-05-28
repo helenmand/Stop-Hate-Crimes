@@ -34,7 +34,8 @@
             <div class="postL" id="postList">
             <?php
 
-                    $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC", "STOP_HATE_CRIMES_DB");
+                    $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC");
+                    @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
 
                     if(isset($_GET["pvbcontent"])) {
                         $pvbcontent = $_GET["pvbcontent"];
