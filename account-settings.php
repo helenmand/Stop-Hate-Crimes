@@ -35,7 +35,7 @@
                 <div class="grid-item-left">
                         <label for="fname">Username:</label><br>
                         <?php
-                            echo "<input type='text' id='Usname' name='Usname' value='".$usersRes['USERNAME']."'>";
+                            echo "<label for='fnameShows'>".$usersRes['USERNAME']."</label>";
                         ?>
                 </div>
                 <div class="grid-item">

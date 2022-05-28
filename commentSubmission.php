@@ -1,23 +1,19 @@
 <?php
 
-    if(isset($_POST['username']) and isset($_POST['password']))
-    {
-        $servername = "127.0.0.1";
-        $username = "LoginUsers";
-        $password = "LogUsSHC";
-        //$username = "NotLoginUsers";
-        //$password = "NLogUsSHC";
-        $dbname = "STOP_HATE_CRIMES_DB";
-
-        $conn = @mysqli_connect($servername, $username, $password);
+    if(isset($_COOKIE['user'])){
+        $conn = @mysqli_connect("localhost", "NotLoginUsers", "NLogUsSHC");
+        @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
         if (!$conn) {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $username = mysqli_real_escape_string($conn, $_POST['usname']);
+        $replyid = mysqli_real_escape_string($conn, $_GET["postid"]);
+        $username = mysqli_real_escape_string($conn, $_COOKIE['user']);
         $comment = mysqli_real_escape_string($conn, $_POST['postBody']);
-        $art_id =  mysqli_real_escape_string($conn, $_GET['postid']);
-        $sql="INSERT INTO comments (USERNAME, COMMENT, ARTICLE_ID) VALUES ('$username','$comment','$email')";
+        $sql="INSERT INTO comments (USERNAME, COMMENT, ARTICLE_ID) VALUES ('$username','$comment','$replyid')";
+    }
+    else{
+        echo "You are not logged in";
     }
 
 ?>
