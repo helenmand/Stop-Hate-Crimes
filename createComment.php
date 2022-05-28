@@ -7,7 +7,13 @@
         <div>
             <?php include "header.php";?>
         </div>
-        <form id="postForm" action="./commentSubmission.php?postid=".$usertext.""\" method="post">
+        <?php
+            $redirect = "\"commentSubmission.php?postid=".$_GET["postid"]."\"";
+            if(isset($_GET["commentid"])) {
+                $redirect = "\"commentSubmission.php?postid=".$_GET["postid"]."&commentid=".$_GET["commentid"]."\"";
+            }
+        ?>
+        <form id="postForm" action=<?php echo $redirect;?> method="post">
             <label for="postBody">Comment:</label>
             <div class="post">
                 <form action="commentSubmission.php" method="post" enctype="multipart/form-data">
