@@ -28,6 +28,10 @@
     height: 2rem;
 }
 
+#postRegion {
+    height: 2rem;
+}
+
 #formSubmitButton {
     width: 90px;
     height: 40px;
