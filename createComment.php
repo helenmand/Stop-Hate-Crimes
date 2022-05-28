@@ -7,7 +7,7 @@
         <div>
             <?php include "header.php";?>
         </div>
-        <form id="postForm">
+        <form id="postForm" action="./commentSubmission.php?postid=".$usertext.""\" method="post">
             <label for="postBody">Comment:</label>
             <div class="post">
                 <form action="commentSubmission.php" method="post" enctype="multipart/form-data">
