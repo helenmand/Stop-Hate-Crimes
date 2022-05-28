@@ -15,7 +15,7 @@
                 <?php
                     if(!isset($_COOKIE["user"])) {
                         echo "<a href=\"./login.php\"><li class=\"bn1\">Login</li></a>";
-                        echo "<a href=\"createAccount.php\"><li class=\"bn1\">Sign Up</li></a>";
+                        echo "<a href=\"createAccount_C.php\"><li class=\"bn1\">Sign Up</li></a>";
                     } else {
                         echo "<a href=\"makeSubmission.php\"><li class=\"bn1\">Submission</li></a>";
                     }
