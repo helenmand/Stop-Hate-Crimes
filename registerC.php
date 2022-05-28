@@ -49,10 +49,21 @@ if ($errors == 0){
 
     mysqli_query($conn, $query);
 
-    $_SESSION['username'] = $username;
-    $_SESSION['success'] = 'You are now logged in!';
+    if(!isset($_COOKIE['user'])){
 
-    header('location: index.php');
+        setcookie("user", $username);
+        setcookie("user_category", "user");
+
+        $_SESSION['username'] = $username;
+        $_SESSION['success'] = 'You are now logged in!';
+
+        header('Location:./index.php');
+    }
+    else{
+        if($_COOKIE['user_category']=="admin"){
+            header('location:./AdminPage.php');
+        }
+    }
 }
 else{
     header("Location:./CreateAccount_C.php?error=".$errors);
