@@ -39,7 +39,15 @@
                         ?>
                 </div>
                 <div class="grid-item">
-                    <img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg">
+                
+                    <?php
+                        $img_src = "./images/default_pfp.png";
+                        if (file_exists("\"./images/".$_COOKIE["user"]."_pfp.png\"")){
+                            $img_src = "\"./images/".$_COOKIE["user"]."_pfp.png\"";
+                        }
+                    ?>
+
+                    <img src=<?php echo $img_src;?> als="Profile Picture">
                 </div>
                 <div class="grid-item-left">
                         <label for="lname">Password:</label><br>
