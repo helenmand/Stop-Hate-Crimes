@@ -5,13 +5,11 @@
 
             include("loginUsersConnection.php");
 
-            $sql="UPDATE `users` SET `USERNAME`='".$_POST['Usname']."',`PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_COOKIE['user']."';";
+            $sql="UPDATE `users` SET `PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_COOKIE['user']."';";
 
     		if ($conn->query($sql) === TRUE) {
-    			setcookie("user", "", time() - 3600);
-            	setcookie("user", $_POST['Usname']);
 
-            	header("Location:./account-settings.php");
+            	header("Location:./account-settings.php");//h sthn profile
     		}
         }
     	else{
@@ -19,20 +17,17 @@
             session_start();
 
             if(isset($_SESSION['us_pw_em'])){
-            	$sql="UPDATE `users` SET `USERNAME`='".$_POST['Usname']."',`PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_SESSION['us_pw_em']['USERNAME']."';";
+            	$sql="UPDATE `users` SET `PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_SESSION['us_pw_em']['USERNAME']."';";
 
                 $conn->query($sql);
                 header("Location:./AdminPage.php");
             }
             else{
-            	$sql="UPDATE `users` SET `USERNAME`='".$_POST['Usname']."',`PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_COOKIE['user']."';";
+            	$sql="UPDATE `users` SET `PASSWORD`='".$_POST['Pwname']."',`EMAIL`='".$_POST['email']."' WHERE `USERNAME`='".$_COOKIE['user']."';";
 
             	if ($conn->query($sql) === TRUE) {
 
-		        	setcookie("user", "", time() - 3600);
-		        	setcookie("user", $_POST['Usname']);
-
-		        	header("Location:./account-settings.php");
+		        	header("Location:./account-settings.php");//h sthn profile
 		        }
             }
             session_destroy();

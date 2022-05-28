@@ -35,15 +35,15 @@
                 <div class="grid-item-left">
                         <label for="fname">Username:</label><br>
                         <?php
-                            echo "<input type='text' id='Usname' name='Usname' value='".$usersRes['USERNAME']."'>";
+                            echo "<label for='fnameShows'>".$usersRes['USERNAME']."</label>";
                         ?>
                 </div>
                 <div class="grid-item">
                 
                     <?php
                         $img_src = "./images/default_pfp.png";
-                        if (file_exists("\"./images/".$_COOKIE["user"]."_pfp.png\"")){
-                            $img_src = "\"./images/".$_COOKIE["user"]."_pfp.png\"";
+                        if (file_exists("./images/".$_COOKIE["user"]."_pfp.png")){
+                            $img_src = "./images/".$_COOKIE["user"]."_pfp.png";
                         }
                     ?>
 
