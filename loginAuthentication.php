@@ -1,4 +1,3 @@
-l
 <?php
     if(isset($_POST['username']) and isset($_POST['password']))
     {
@@ -24,7 +23,7 @@ l
 
         if (isset($select)) {
             setcookie("user", $_POST['username']);
-            if ($select['USER_CATEGORIES']=='admin'){
+            if ($select['USER_CATEGORIES']=='admin')
                 setcookie("user_category", "admin");
                 header("Location:./AdminPage.php");
             }
@@ -38,6 +37,4 @@ l
             $error = "1";
             header("Location:./login.php?error=".$error);
         }
-    }
-
 ?>
