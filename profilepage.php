@@ -14,11 +14,23 @@
     <div class="profile">
       <div id="profile-upper">
         <div id="profile-banner-image">
-          <img src=<?php echo "\"./images/".$_GET["user"]."_bg.png\"";?> alt="Banner image">
+          <?php
+            $img_src = "./images/default_bg.jpg";
+            if (file_exists("\"./images/".$_GET["user"]."_bg.png\"")){
+              $img_src = "\"./images/".$_GET["user"]."_bg.png\"";
+            }
+          ?>
+          <img src=<?php echo $img_src;?> alt="Banner image">
         </div>
         <div id="profile-i">
           <div id="profile-pic">
-            <img src=<?php echo "\"./images/".$_GET["user"]."_pfp.png\"";?> als="Profile Picture">
+          <?php
+            $img_src = "./images/default_pfp.png";
+            if (file_exists("\"./images/".$_GET["user"]."_pfp.png\"")){
+              $img_src = "\"./images/".$_GET["user"]."_pfp.png\"";
+            }
+          ?>
+          <img src=<?php echo $img_src;?> als="Profile Picture">
           </div>
           <div class="container">
             <div id="username"><?php echo $_GET["user"]?></div>

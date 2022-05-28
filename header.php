@@ -40,7 +40,13 @@
                 ?>
                 >
                     <button>
-                        <img src=<?php echo "\"./images/".$_COOKIE["user"]."_pfp.png\"";?>>
+                    <?php
+                        $img_src = "./images/default_pfp.png";
+                        if (file_exists("\"./images/".$_COOKIE["user"]."_pfp.png\"")){
+                            $img_src = "\"./images/".$_COOKIE["user"]."_pfp.png\"";
+                        }
+                    ?>
+                    <img src=<?php echo $img_src;?> als="Profile Picture">
                     </button>
                 </a>
             </div>
