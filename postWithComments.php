@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="./postWithComments.css">
         <link rel="stylesheet" href="./post.css">
         <link rel="stylesheet" href="comment.css">
+        <script src="postWithComments.js"></script>
     </head>
     <body>
         <div>
@@ -43,7 +44,7 @@
                                 <a>".$row["COMMENT"]."</a>
                             </div>
                             <div class=\"commentButtons\">
-                                <button class=\"commentReplyButton bn2\">Reply</button>
+                                <button class=\"commentReplyButton bn2\" onclick=\"openCommentReply(".$row["ARTICLE_ID"].", ".$row["ID"].")\">Reply</button>
                             </div>
                             <div class=\"commentReply\">";
 
@@ -70,7 +71,7 @@
                                 <a>".$row["COMMENT"]."</a>
                             </div>
                             <div class=\"commentButtons\">
-                                <button class=\"commentReplyButton bn2\">Reply</button>
+                                <button class=\"commentReplyButton bn2\" onclick=\"openCommentReply(".$row["ARTICLE_ID"].", ".$row["ID"].")\">Reply</button>
                             </div>
                             <div class=\"commentReply\">";
                         
