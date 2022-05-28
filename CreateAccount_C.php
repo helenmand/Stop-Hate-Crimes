@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CreateAccount.css">
-        <script src="./importHeader.js"></script>
         <script src="./CreateAccount.js"></script>
         <title>Stop Hate Crimes</title>
 	</head>
 	<body>
-		<div id="importHeader"></div>
+        <div>
+            <?php include "header.php";?>
+        </div>
 		<h1 class="headerCreateAccount">Create Account</h1>
 		<div class="gridcontainer">
 			<div class="leftposition">
