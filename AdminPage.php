@@ -49,7 +49,7 @@
 				</table>
 			</div>
 			<div class="AddButtonPosition">
-				<a href="CreateAccount.php"><input class="AddButton" type="submit" value="Add"></a>
+				<a href="CreateAccount_C.php"><input class="AddButton" type="submit" value="Add"></a>
 			</div>
 			<div class="userControlsGridContainer">
 				<div class="connectcols1_2 UserNamelabelPosition">
