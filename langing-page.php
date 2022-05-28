@@ -69,7 +69,7 @@
                             LIMIT 3";
                         }
                         
-                        $results = mysqli_query($conn, $sqlQuery);
+                        $results = mysqli_query($conn, $sqlQuery) or die(mysqli_error($conn));
                         while($row = mysqli_fetch_array($results)) {
 
                             if($row["region"]) {
