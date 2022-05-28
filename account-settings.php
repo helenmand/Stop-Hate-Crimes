@@ -35,19 +35,11 @@
                 <div class="grid-item-left">
                         <label for="fname">Username:</label><br>
                         <?php
-                            echo "<input type='text' id='Usname' name='Usname' value='".$usersRes['USERNAME']."'>";
+                            echo "<label for='fnameShows'>".$usersRes['USERNAME']."</label>";
                         ?>
                 </div>
                 <div class="grid-item">
-                
-                    <?php
-                        $img_src = "./images/default_pfp.png";
-                        if (file_exists("\"./images/".$_COOKIE["user"]."_pfp.png\"")){
-                            $img_src = "\"./images/".$_COOKIE["user"]."_pfp.png\"";
-                        }
-                    ?>
-
-                    <img src=<?php echo $img_src;?> als="Profile Picture">
+                    <img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg">
                 </div>
                 <div class="grid-item-left">
                         <label for="lname">Password:</label><br>
