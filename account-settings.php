@@ -3,11 +3,18 @@
         header("Location:./index.php");
     }
     else{
-        include("loginUsersConnection.php");
-        $sql="SELECT `USERNAME`, `PASSWORD`, `EMAIL` FROM `users` WHERE `USERNAME`='".$_COOKIE['user']."' ;";
+        session_start();
+        if(!isset($_SESSION['us_pw_em'])){
+            include("loginUsersConnection.php");
+            $sql="SELECT `USERNAME`, `PASSWORD`, `EMAIL` FROM `users` WHERE `USERNAME`='".$_COOKIE['user']."' ;";
 
-        $results = mysqli_query($conn, $sql);
-        $usersRes = mysqli_fetch_array($results);
+            $results = mysqli_query($conn, $sql);
+            $usersRes = mysqli_fetch_array($results);
+        }
+        else{
+            $usersRes=$_SESSION['us_pw_em'];
+            session_destroy();
+        }
     }
 ?>
 <!DOCTYPE html>

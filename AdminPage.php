@@ -39,7 +39,7 @@
 						<?php
 							include("AdminsConnection.php");
 							$sql = "SELECT `USERNAME`, `PASSWORD`, `EMAIL` FROM users";
-							$result = @mysqli_select_db($conn, $dbname);
+							//$result = @mysqli_select_db($conn, $dbname);
 							$results = mysqli_query($conn, $sql);
 							while ($row = mysqli_fetch_array($results)){
 								echo "<tr><td class='namecol'>" . $row["USERNAME"] . "</td><td class='psswdcol'>" . $row["PASSWORD"] . "</td><td class='emailcol'>" . $row["EMAIL"] . "</td></tr>";
@@ -51,19 +51,21 @@
 			<div class="AddButtonPosition">
 				<a href="CreateAccount_C.php"><input class="AddButton" type="submit" value="Add"></a>
 			</div>
-			<div class="userControlsGridContainer">
-				<div class="connectcols1_2 UserNamelabelPosition">
-					<label>Username</label><input class="UserInput" type="text" id="Username" Placeholder="User name"/><br>
-					<label class="WarningLabel" id="WarningUsername" ></label>
-				</div>
+			<form  action="./AdminsInputCheck.php" method="post">
+                <div class="userControlsGridContainer">
+                    <div class="connectcols1_2 UserNamelabelPosition">
+                        <label>Username</label><input class="UserInput" type="text" id="Username" name="username" Placeholder="User name"/><br>
+                        <label class="WarningLabel" id="WarningUsername" ></label>
+                    </div>
 
-				<div class="deletePosition">
-					<input class="buttons" type="submit" onclick="" value="Delete">
-				</div>
-				<div class="UpdatePosition">
-					<input class="buttons" type="submit" onclick="UpdateButtonUsers()" value="Update">
-				</div>
-			</div>
+                    <div class="deletePosition">
+                        <input class="buttons" type="submit" name="userbuttons" value="Delete">
+                    </div>
+                    <div class="UpdatePosition">
+                        <input class="buttons" type="submit" name="userbuttons" value="Update">
+                    </div>
+                </div>
+			</form>
 		</div>
 		<div class="botGridContainer">
 			<div class="UserlabelPosition">
@@ -87,7 +89,7 @@
 					</tr>
 						<?php
 							$sql = "SELECT `ID`, `TITLE`, `USERNAME` FROM `complaints`;";
-							$result = @mysqli_select_db($conn, $dbname);
+							//$result = @mysqli_select_db($conn, $dbname);
 							$results = mysqli_query($conn, $sql);
 							while ($row = mysqli_fetch_array($results)){
 								echo "<tr><td class='namecol'>" . $row["ID"] . "</td><td class='psswdcol'>" . $row["TITLE"] . "</td><td class='emailcol'>" . $row["USERNAME"] . "</td></tr>";
@@ -109,7 +111,7 @@
 						</th>
 						<?php
 							$sql = "SELECT `ID`, `TITLE`, `USERNAME` FROM `articles`;";
-							$result = @mysqli_select_db($conn, $dbname);
+							//$result = @mysqli_select_db($conn, $dbname);
 							$results = mysqli_query($conn, $sql);
 							while ($row = mysqli_fetch_array($results)){
 								echo "<tr><td class='namecol'>" . $row["ID"] . "</td><td class='psswdcol'>" . $row["TITLE"] . "</td><td class='emailcol'>" . $row["USERNAME"] . "</td></tr>";

@@ -8,4 +8,5 @@ $conn = @mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . $conn->connect_error);
 }
+$result = @mysqli_select_db($conn, $dbname);
 ?>
