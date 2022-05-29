@@ -63,7 +63,7 @@
                 }
             ?>
             <?php
-                if($_COOKIE['user_category']=="admin" and $_SESSION['post']=="complaint"){
+                if($_COOKIE['user_category']=="admin" and ($_SESSION['post']!=null and $_SESSION['post']=="complaint")){
                     echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
                     echo "<input type='text' id='postRegion' name='postRegion' value='".$_SESSION['data']['REGION']."'>";
                 }
