@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if($_COOKIE['user_category']=="user" or (($_SESSION['action']!=null and $_SESSION['action']=="add"))){
+    if($_COOKIE['user_category']=="user" or ($_SESSION['action']!=null and $_SESSION['action']=="add") or ($_COOKIE['user_category']=="admin" and $_SESSION['action']==null)){
 
         $conn = @mysqli_connect("localhost", "LoginUsers", "LogUsSHC");
         @mysqli_select_db($conn, "STOP_HATE_CRIMES_DB");
