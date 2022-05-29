@@ -130,14 +130,21 @@
 					</tr>
 				</table>
 			</div>
-			<form  action="./AdminsInputComplaintsArticle.php" method="post">
+			<form  action="./AdminsInputComplaints.php" method="post">
                 <div class="botControlsgridContainer">
                     <div class="connectcols1_2">
                         <label>Complain ID:</label><br>
                         <input class="widthinput"type="text" id="ComplainID" name="complaint" Placeholder="Complain ID"/><br>
                         <?php
-                            if(isset($_GET["error"]) and ($_GET["error"]=="2")){
-                                echo "<label class='WarningLabel' id='WarningComplain'>Complaint ID not exists</label>";
+                            if(isset($_GET["error"])){
+                                if($_GET["error"]=="2"){
+                                        echo "<label class='WarningLabel' id='WarningComplain'>Complaint ID not exists</label>";
+                                    }
+                                else{
+                                    if($_GET["error"]=="3"){
+                                        echo "<label class='WarningLabel' id='WarningComplain'>No input Complaint ID</label>";
+                                    }
+                                }
                             }
                         ?>
                     </div>
@@ -152,14 +159,21 @@
                     </div>
                 </div>
 			</form>
-			<form  action="./AdminsInputComplaintsArticle.php" method="post">
+			<form  action="./AdminsInputArticles.php" method="post">
                 <div class="botControlsgridContainer ArticleGridPadding">
                     <div class="connectcols1_2">
                             <label>Article ID:</label><br>
                             <input class="widthinput"type="text" id="ArticleID" name="article" Placeholder="Article ID"/><br>
                             <?php
-                                if(isset($_GET["error"]) and ($_GET["error"]=="3")){
-                                    echo "<label class='WarningLabel' id='WarningArticle'>Artile ID not exists</label>";
+                                if(isset($_GET["error"])){
+                                    if($_GET["error"]=="4"){
+                                        echo "<label class='WarningLabel' id='WarningArticle'>Artile ID not exists</label>";
+                                    }
+                                    else{
+                                        if($_GET["error"]=="5"){
+                                            echo "<label class='WarningLabel' id='WarningArticle'>No input Article ID</label>";
+                                        }
+                                    }
                                 }
                             ?>
                         </div>
@@ -167,10 +181,10 @@
                             <input class="buttons" type="submit" name="submit" value="Add">
                         </div>
                         <div class="buttonsDeleteComArt">
-                            <input class="buttons" type="submit" name="submit" value="Delete">
+                            <input class="buttons" type="submit" id="ArticleDel" name="submit" value="Delete">
                         </div>
                         <div class="buttonsUpdateComArt">
-                            <input class="buttons UpdateComArt" type="submit" name="submit" value="Update">
+                            <input class="buttons UpdateComArt" type="submit" id="ArticleUpd" name="submit"  value="Update">
                         </div>
                     <div></div>
                 </div>

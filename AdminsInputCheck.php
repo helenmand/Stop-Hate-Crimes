@@ -23,6 +23,9 @@
             $sql="UPDATE `articles` SET `USERNAME`='deleted' WHERE `USERNAME` IS NULL;";
             $conn->query($sql);
 
+            $sql="UPDATE `comments` SET `USERNAME`='deleted' WHERE `USERNAME` IS NULL;";
+            $conn->query($sql);
+
             header("Location:./AdminPage.php");
     	}
     }
