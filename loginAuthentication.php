@@ -13,13 +13,13 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql="SELECT `USERNAME`, `USER_CATEGORIES` FROM `users` WHERE `USERNAME`='".$_POST['username']."' AND `PASSWORD`='".$_POST['password']."';";
+        $sql="SELECT `USERNAME`, `USER_CATEGORIES` FROM `users` WHERE (`USERNAME`='".$_POST['username']."' AND `PASSWORD`='".$_POST['password']."') AND `USERNAME`!='deleted';";
 
         $result = @mysqli_select_db($conn, $dbname);
         $results = mysqli_query($conn, $sql);
         $select = mysqli_fetch_array($results);
 
-        if (isset($select['USERNAME'])) {
+        if (isset($select)) {
             setcookie("user", $_POST['username']);
             if ($select['USER_CATEGORIES']=='admin'){
                 setcookie("user_category", "admin");

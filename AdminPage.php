@@ -42,8 +42,8 @@
 					<tr>
 						<?php
 							include("AdminsConnection.php");
-							$sql = "SELECT `USERNAME`, `PASSWORD`, `EMAIL` FROM users";
-							//$result = @mysqli_select_db($conn, $dbname);
+							$sql = "SELECT `USERNAME`, `PASSWORD`, `EMAIL` FROM users WHERE `USERNAME`!='deleted';";
+
 							$results = mysqli_query($conn, $sql);
 							while ($row = mysqli_fetch_array($results)){
 								echo "<tr><td class='namecol'>" . $row["USERNAME"] . "</td><td class='psswdcol'>" . $row["PASSWORD"] . "</td><td class='emailcol'>" . $row["EMAIL"] . "</td></tr>";
