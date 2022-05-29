@@ -9,6 +9,7 @@
     </head>
   <body>
     <div>
+      <?php if(strcmp($_GET["user"], "deleted") == 0) {header("Location:./index.php");} ?>
       <?php include "header.php";?>
     </div>
     <div class="profile">
