@@ -68,8 +68,10 @@
                     echo "<input type='text' id='postRegion' name='postRegion' value='".$_SESSION['data']['REGION']."'>";
                 }
                 else{
+                    if($_COOKIE['user_category']=="user" or ($_COOKIE['user_category']=="admin" and !isset($_SESSION['post']))) {
                         echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
                         echo "<input type='text' id='postRegion' name='postRegion'>";
+                    }
                 }
             ?>
             <input type="submit" value="Submit" id="formSubmitButton">
