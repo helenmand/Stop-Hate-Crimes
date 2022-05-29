@@ -136,6 +136,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_CATEGORIES`, `EMAIL`) VALUES
+('deleted', 'deleted', 'user', 'noemail'),
 ('admin', 'adminP', 'admin', 'admin@gmail.com'),
 ('alexis', '1234567890', 'user', 'alexis01@yahoo.com'),
 ('hackerxxx', 'imahacker1999', 'user', 'chad1999@yahoo.com'),
