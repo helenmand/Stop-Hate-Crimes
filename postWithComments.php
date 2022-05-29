@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="./post.css">
         <link rel="stylesheet" href="comment.css">
         <script src="postWithComments.js"></script>
+        <script src="post.js"></script>
     </head>
     <body>
         <div>
