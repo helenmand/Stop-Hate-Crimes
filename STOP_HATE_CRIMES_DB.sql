@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 28, 2022 at 07:17 PM
+-- Generation Time: May 29, 2022 at 01:48 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -26,27 +26,6 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `articles`
 --
-
-CREATE TABLE `users` (
-  `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `PASSWORD` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `USER_CATEGORIES` varchar(5) NOT NULL,
-  `EMAIL` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO users (USERNAME, PASSWORD, USER_CATEGORIES, EMAIL) VALUES
-('admin', 'adminP', 'admin', 'admin@gmail.com'),
-('alexis', '1234567890', 'user', 'alexis01@yahoo.com'),
-('hackerxxx', 'imahacker1999', 'user', 'chad1999@yahoo.com'),
-('heristos', 'h73ge6eg346e', 'user', 'heristos@hotmail.com'),
-('rumbling', '34werethedanger90', 'user', 'biscoti@hotmail.com'),
-('spiros09', '54fer5erf4', 'user', 'spiros09@gmail.com');
-
-
 
 CREATE TABLE `articles` (
   `ID` int(10) UNSIGNED NOT NULL,
@@ -93,6 +72,7 @@ INSERT INTO `comments` (`ID`, `USERNAME`, `COMMENT`, `ARTICLE_ID`) VALUES
 (7, 'spiros09', 'Μόνο στο τικ τοκ έχω δει κάνα δυο! Σπανίζουν όμως', 4),
 (8, 'heristos', 'distixos', 4),
 (9, 'spiros09', ' \"Εχω αναπτυξει τεκμηριωμενη θεωρια\"\r\n ρε... αστειο', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -104,12 +84,16 @@ CREATE TABLE `comments_on_comments` (
   `FOLLOWS` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `comments_on_comments`
+--
 
 INSERT INTO `comments_on_comments` (`COMMENTS`, `FOLLOWS`) VALUES
 (1, 6),
 (3, 7),
 (7, 8),
 (5, 9);
+
 -- --------------------------------------------------------
 
 --
@@ -140,7 +124,24 @@ INSERT INTO `complaints` (`ID`, `TITLE`, `USERNAME`, `CONTENT`, `REGION`, `DATE`
 -- Table structure for table `users`
 --
 
+CREATE TABLE `users` (
+  `USERNAME` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PASSWORD` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `USER_CATEGORIES` varchar(5) NOT NULL,
+  `EMAIL` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_CATEGORIES`, `EMAIL`) VALUES
+('admin', 'adminP', 'admin', 'admin@gmail.com'),
+('alexis', '1234567890', 'user', 'alexis01@yahoo.com'),
+('hackerxxx', 'imahacker1999', 'user', 'chad1999@yahoo.com'),
+('heristos', 'h73ge6eg346e', 'user', 'heristos@hotmail.com'),
+('rumbling', '34werethedanger90', 'user', 'biscoti@hotmail.com'),
+('spiros09', '54fer5erf4', 'user', 'spiros09@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -160,13 +161,14 @@ ALTER TABLE `comments`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `USERNAME` (`USERNAME`),
   ADD KEY `ARTICLE_ID` (`ARTICLE_ID`);
-  
-  
-
 
 --
 -- Indexes for table `comments_on_comments`
 --
+ALTER TABLE `comments_on_comments`
+  ADD KEY `COMMENTS_ON_COMMENTS_ibfk_1` (`COMMENTS`),
+  ADD KEY `COMMENTS_ON_COMMENTS_ibfk_2` (`FOLLOWS`);
+
 --
 -- Indexes for table `complaints`
 --
@@ -188,27 +190,27 @@ ALTER TABLE `users`
 -- Constraints for table `articles`
 --
 ALTER TABLE `articles`
-  ADD CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
-  ADD CONSTRAINT `COMMENTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `COMMENTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`) ON DELETE SET NULL,
   ADD CONSTRAINT `COMMENTS_ibfk_2` FOREIGN KEY (`ARTICLE_ID`) REFERENCES `articles` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `comments_on_comments`
 --
 ALTER TABLE `comments_on_comments`
-  ADD CONSTRAINT `COMMENTS_ON_COMMENTS_ibfk_1` FOREIGN KEY (`COMMENTS`) REFERENCES `comments` (`ID`),
-  ADD CONSTRAINT `COMMENTS_ON_COMMENTS_ibfk_2` FOREIGN KEY (`FOLLOWS`) REFERENCES `comments` (`ID`);
+  ADD CONSTRAINT `COMMENTS_ON_COMMENTS_ibfk_1` FOREIGN KEY (`COMMENTS`) REFERENCES `comments` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `COMMENTS_ON_COMMENTS_ibfk_2` FOREIGN KEY (`FOLLOWS`) REFERENCES `comments` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `complaints`
 --
 ALTER TABLE `complaints`
-  ADD CONSTRAINT `COMPLAINTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `COMPLAINTS_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`) ON DELETE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
