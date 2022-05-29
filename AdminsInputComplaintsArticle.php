@@ -1,8 +1,8 @@
 <?php
+    session_start();
     include("AdminsConnection.php");
 
     if(isset($_POST['complaint'])){
-        session_start();
         $_SESSION['post']="complaint";
 
         if($_POST['submit']=="Add"){
@@ -53,7 +53,6 @@
         }
     }
     else{
-        session_start();
         $_SESSION['post']="article";
 
         if($_POST['submit']=="Add"){
