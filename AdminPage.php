@@ -2,6 +2,10 @@
     if (!isset($_COOKIE['user_category']) and $_COOKIE['user_category']!='admin'){
         header("Location:./index.php");
     }
+    else{
+        session_start();
+        session_destroy();
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -126,39 +130,51 @@
 					</tr>
 				</table>
 			</div>
-			<div class="botControlsgridContainer">
-				<div class="connectcols1_2">
-					<label>Complain ID:</label><br>
-					<input class="widthinput"type="text" id="ComplainID" Placeholder="Complain ID"/><br>
-					<label class="WarningLabel" id="WarningComplain"></label>
-				</div>
-				<div>
-					<a href="makeSubmission.php"><input class="buttons" type="submit" value="Add"></a>
-				</div>
-				<div class="buttonsDeleteComArt">
-					<input class="buttons " type="submit" value="Delete">
-				</div>
-				<div class="buttonsUpdateComArt">
-					<input class="buttons UpdateComArt" type="submit" onclick="UpdateButtonComplains()" value="Update">
-				</div>
-			</div>
-			<div class="botControlsgridContainer ArticleGridPadding">
-				<div class="connectcols1_2">
-						<label>Article ID:</label><br>
-						<input class="widthinput"type="text" id="ComplainID" Placeholder="Article ID"/><br>
-						<label class="WarningLabel" id="WarningArticle"></label>
-					</div>
-					<div>
-						<a href="makeSubmission.php"><input class="buttons" type="submit" value="Add"></a>
-					</div>
-					<div class="buttonsDeleteComArt">
-						<input class="buttons" type="submit" value="Delete">
-					</div>
-					<div class="buttonsUpdateComArt">
-						<input class="buttons UpdateComArt" type="submit" onclick="UpdateButtonComplains()" value="Update">
-					</div>
-				<div></div>
-			</div>
+			<form  action="./AdminsInputComplaintsArticle.php" method="post">
+                <div class="botControlsgridContainer">
+                    <div class="connectcols1_2">
+                        <label>Complain ID:</label><br>
+                        <input class="widthinput"type="text" id="ComplainID" name="complaint" Placeholder="Complain ID"/><br>
+                        <?php
+                            if(isset($_GET["error"]) and ($_GET["error"]=="2")){
+                                echo "<label class='WarningLabel' id='WarningComplain'>Complaint ID not exists</label>";
+                            }
+                        ?>
+                    </div>
+                    <div>
+                        <input class="buttons" type="submit" name="submit" value="Add">
+                    </div>
+                    <div class="buttonsDeleteComArt">
+                        <input class="buttons " type="submit" name="submit" value="Delete">
+                    </div>
+                    <div class="buttonsUpdateComArt">
+                        <input class="buttons UpdateComArt" type="submit" name="submit"  value="Update">
+                    </div>
+                </div>
+			</form>
+			<form  action="./AdminsInputComplaintsArticle.php" method="post">
+                <div class="botControlsgridContainer ArticleGridPadding">
+                    <div class="connectcols1_2">
+                            <label>Article ID:</label><br>
+                            <input class="widthinput"type="text" id="ArticleID" name="article" Placeholder="Article ID"/><br>
+                            <?php
+                                if(isset($_GET["error"]) and ($_GET["error"]=="3")){
+                                    echo "<label class='WarningLabel' id='WarningArticle'>Artile ID not exists</label>";
+                                }
+                            ?>
+                        </div>
+                        <div>
+                            <input class="buttons" type="submit" name="submit" value="Add">
+                        </div>
+                        <div class="buttonsDeleteComArt">
+                            <input class="buttons" type="submit" name="submit" value="Delete">
+                        </div>
+                        <div class="buttonsUpdateComArt">
+                            <input class="buttons UpdateComArt" type="submit" name="submit" value="Update">
+                        </div>
+                    <div></div>
+                </div>
+            </form>
 		</div>
 	</body>
 </html>
