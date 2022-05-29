@@ -69,6 +69,7 @@
                 }
                 else{
                     if($_COOKIE['user_category']=="user"){
+                        echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
                         echo "<input type='text' id='postRegion' name='postRegion'>";
                     }
                 }
