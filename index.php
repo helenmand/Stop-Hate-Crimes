@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>Stop Hate Crimes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div>
