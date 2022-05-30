@@ -51,13 +51,13 @@
                 <div class="grid-item-left">
                         <label for="lname">Password:</label><br>
                         <?php
-                            echo "<input type='password' id='Pwname' name='Pwname' value='".$usersRes['PASSWORD']."'>";
+                            echo "<input type='password' id='Pwname' name='Pwname' value='".$usersRes['PASSWORD']."' required>";
                         ?>
                 </div>
                 <div class="grid-item-right">
                         <label for="lname">Email:</label><br>
                         <?php
-                            echo "<input type='text' id='email' name='email' value='".$usersRes['EMAIL']."'><br>";
+                            echo "<input type='text' id='email' name='email' value='".$usersRes['EMAIL']."' required><br>";
                             if(isset($_GET["error"]) and $_GET["error"]=="1"){
                                 echo "<label class='WarningLabel' id='WarningArticle'>Email exists</label>";
                             }

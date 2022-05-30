@@ -16,14 +16,14 @@
                 <?php
                     if($_COOKIE['user_category']=="admin" and isset($_SESSION['post'])){
                         if ($_SESSION['post']=="article"){
-                            echo "<input type='radio' id='Article' name='postType' value='Article' onchange='hideRegion();' checked>";
+                            echo "<input type='radio' id='Article' name='postType' value='Article' onchange='hideRegion();' checked required>";
                         }
                         else{
-                            echo "<input type='radio' id='Article' name='postType' value='Article' onchange='hideRegion();' disabled>";
+                            echo "<input type='radio' id='Article' name='postType' value='Article' onchange='hideRegion();' disabled required>";
                         }
                     }
                     else{
-                        echo "<input type='radio' id='Article' name='postType' value='Article' onchange='hideRegion();'>";
+                        echo "<input type='radio' id='Article' name='postType' value='Article' onchange='hideRegion();' required>";
                     }
                     ?>
                 <label for="Article">Article</label>
@@ -32,14 +32,14 @@
                 <?php
                     if($_COOKIE['user_category']=="admin" and isset($_SESSION['post'])){
                         if ($_SESSION['post']=="complaint"){
-                            echo "<input type='radio' id='Complaint' name='postType' value='Complaint' onchange='showRegion();' checked>";
+                            echo "<input type='radio' id='Complaint' name='postType' value='Complaint' onchange='showRegion();' checked required>";
                         }
                         else{
-                             echo "<input type='radio' id='Complaint' name='postType' value='Complaint' onchange='showRegion();' disabled>";
+                             echo "<input type='radio' id='Complaint' name='postType' value='Complaint' onchange='showRegion();' disabled required>";
                         }
                     }
                     else{
-                            echo "<input type='radio' id='Complaint' name='postType' value='Complaint' onchange='showRegion();'>";
+                            echo "<input type='radio' id='Complaint' name='postType' value='Complaint' onchange='showRegion();' required>";
                         }
                     ?>
                 <label for="Complaint">Complaint</label>
@@ -47,10 +47,10 @@
             <label for="postTitle">Title:</label>
             <?php
                 if($_COOKIE['user_category']=="admin" and isset($_SESSION['data'])){
-                    echo "<input type='text' id='postTitle' name='postTitle' value='".$_SESSION['data']['TITLE']."'>";
+                    echo "<input type='text' id='postTitle' name='postTitle' value='".$_SESSION['data']['TITLE']."' required>";
                 }
                 else{
-                    echo "<input type='text' id='postTitle' name='postTitle'>";
+                    echo "<input type='text' id='postTitle' name='postTitle' required>";
                 }
             ?>
             <label for="postBody">Body:</label>
@@ -68,16 +68,16 @@
                     echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
 
                     if(isset($_SESSION['data'])){
-                        echo "<input type='text' id='postRegion' name='postRegion' value='".$_SESSION['data']['REGION']."'>";
+                        echo "<input type='text' id='postRegion' name='postRegion' value='".$_SESSION['data']['REGION']."' required>";
                         }
                     else{
-                        echo "<input type='text' id='postRegion' name='postRegion'>";
+                        echo "<input type='text' id='postRegion' name='postRegion' required>";
                     }
                 }
             } else{
                     
                 echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
-                echo "<input type='text' id='postRegion' name='postRegion'>";
+                echo "<input type='text' id='postRegion' name='postRegion' required>";
                 
             }
                 
