@@ -9,63 +9,68 @@ if (!$conn) {
     $errors="1";
 }
 
-# data base connection IDK PAL
-$dbconn = @mysqli_select_db($conn, $dbname);
-
-# Add data to the vars
-$username=$_POST['usname'];
-$password=$_POST['psword'];
-$password_repeat=$_POST['repeatpsword'];
-$email=$_POST['email'];
-
-
-# Checking that the user is unique, plus that passwords match
-
-$sql=mysqli_query($conn,"SELECT * FROM users where EMAIL='".$email."';");
-if(mysqli_num_rows($sql)>0)
-{
-    //Email Id Already Exists
-    $errors="2";
-}
-
-$sql_2=mysqli_query($conn,"SELECT * FROM users where USERNAME='".$username."';");
-if(mysqli_num_rows($sql_2)>0)
-{
-    //"Username Id Already Exists"
-    $errors="3";
-}
-
-if ($password != $password_repeat)
-{
-    //"Passwords do not match";
-    $errors="4";
-}
-
-# User registration
-
-if ($errors == 0){
-    $cat = 'user';
-    $query="INSERT INTO `users`(`USERNAME`, `PASSWORD`, `USER_CATEGORIES`, `EMAIL`) VALUES ('".$username."','".$password."', '".$cat."','".$email."');";
-
-    mysqli_query($conn, $query);
-
-    if(!isset($_COOKIE['user'])){
-
-        setcookie("user", $username);
-        setcookie("user_category", "user");
-
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = 'You are now logged in!';
-
-        header('Location:./index.php');
-    }
-    else{
-        if($_COOKIE['user_category']=="admin"){
-            header('location:./AdminPage.php');
-        }
-    }
+if($_POST['usname']==null or $_POST['psword']==null or $_POST['repeatpsword']==null or $_POST['email']==null){
+    header("Location:./CreateAccount_C.php?error="."5");
 }
 else{
-    header("Location:./CreateAccount_C.php?error=".$errors);
+    # data base connection IDK PAL
+    $dbconn = @mysqli_select_db($conn, $dbname);
+
+    # Add data to the vars
+    $username=$_POST['usname'];
+    $password=$_POST['psword'];
+    $password_repeat=$_POST['repeatpsword'];
+    $email=$_POST['email'];
+
+
+    # Checking that the user is unique, plus that passwords match
+
+    $sql=mysqli_query($conn,"SELECT * FROM users where EMAIL='".$email."';");
+    if(mysqli_num_rows($sql)>0)
+    {
+        //Email Id Already Exists
+        $errors="2";
+    }
+
+    $sql_2=mysqli_query($conn,"SELECT * FROM users where USERNAME='".$username."';");
+    if(mysqli_num_rows($sql_2)>0)
+    {
+        //"Username Id Already Exists"
+        $errors="3";
+    }
+
+    if ($password != $password_repeat)
+    {
+        //"Passwords do not match";
+        $errors="4";
+    }
+
+    # User registration
+
+    if ($errors == 0){
+        $cat = 'user';
+        $query="INSERT INTO `users`(`USERNAME`, `PASSWORD`, `USER_CATEGORIES`, `EMAIL`) VALUES ('".$username."','".$password."', '".$cat."','".$email."');";
+
+        mysqli_query($conn, $query);
+
+        if(!isset($_COOKIE['user'])){
+
+            setcookie("user", $username);
+            setcookie("user_category", "user");
+
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = 'You are now logged in!';
+
+            header('Location:./index.php');
+        }
+        else{
+            if($_COOKIE['user_category']=="admin"){
+                header('location:./AdminPage.php');
+            }
+        }
+    }
+    else{
+        header("Location:./CreateAccount_C.php?error=".$errors);
+    }
 }
 ?>
