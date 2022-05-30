@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CreateAccount.css">
-        <script src="./CreateAccount.js"></script>
         <title>Stop Hate Crimes</title>
 	</head>
 	<body>

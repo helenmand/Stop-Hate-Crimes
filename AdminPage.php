@@ -13,7 +13,6 @@
 		<meta charset="utf-8">
 		<title>Admin</title>
 		<link rel="stylesheet" href="AdminPage.css"/>
-		<script src="AdminPage.js"></script>
 	</head>
 	<body>
         <?php

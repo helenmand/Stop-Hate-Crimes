@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./login.css"/>
-		<script src="./login.js"></script>
 		<title>Stop Hate Crimes</title>
 	</head>
 	<body>
@@ -29,7 +28,6 @@
                             echo "<label class='warningLabel' id='warningOutput'>The username or password is incorrect</label>";
                         }
                     ?>
-
                 </div>
             </div>
             <div class="loginButtonPosition">

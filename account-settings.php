@@ -21,7 +21,6 @@
     <head>
         <title>Stop Hate Crimes</title>
         <link rel="stylesheet" href="./account-settings.css">
-        <script src="./account-settings.js"></script>
     </head>
     <body>
         <div>
