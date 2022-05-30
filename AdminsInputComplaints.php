@@ -2,7 +2,7 @@
     session_start();
     include("AdminsConnection.php");
 
-    if($_POST['complaint']!=null){
+    if($_POST['complaint']!=null or $_POST['submit']=="Add"){
         $_SESSION['post']="complaint";
 
         if($_POST['submit']=="Add"){
