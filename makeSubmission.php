@@ -63,7 +63,8 @@
                 }
             ?>
             <?php
-                if($_SESSION['post']!=null and $_SESSION['post']=="complaint"){
+            if(isset($_SESSION['post'])) {
+                if($_SESSION['post']=="complaint"){
                     echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
 
                     if(isset($_SESSION['data'])){
@@ -73,12 +74,14 @@
                         echo "<input type='text' id='postRegion' name='postRegion'>";
                     }
                 }
-                else{
-                    if($_COOKIE['user_category']=="user" or ($_COOKIE['user_category']=="admin" and $_SESSION['post']==null)){
-                        echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
-                        echo "<input type='text' id='postRegion' name='postRegion'>";
-                    }
-                }
+            } else{
+                    
+                echo "<label for='postRegion' id='postRegionLabel'>Region:</label>";
+                echo "<input type='text' id='postRegion' name='postRegion'>";
+                
+            }
+                
+                
             ?>
             <input type="submit" value="Submit" id="formSubmitButton">
         </form>
