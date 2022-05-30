@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="./landing-page.css">
         <link rel="stylesheet" href="./post.css">
         <link rel="stylesheet" href="./post-navigation-bar.css">
-        <script src="landing-page.js"></script>
         <script src="./post-navigation-bar.js"></script>
         <script src="post.js"></script>
     </head>
@@ -22,9 +21,16 @@
                 ?>
                 
             </div>
+            <?php 
+                if(isset($_COOKIE["user"])) {
+                    $welcomemessageuser = " ".$_COOKIE["user"];
+                } else {
+                    $welcomemessageuser = "";
+                }
+            
+            ?>
             <div class="text">
-                <p id="welcomeText"></p>
-                <script>writeWelcomeText();</script>
+                <p id="welcomeText">Welcome to our website<?php echo $welcomemessageuser ?>!<br>This is a safe space.</p>
             </div>
         </div>
         <div class="posts">
