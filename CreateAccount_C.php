@@ -14,20 +14,20 @@
 			<div class="leftposition">
 			<form action="./registerC.php" method="post" enctype="multipart/form-data"> <!-- Added -->
                     <label for="username">Username:</label><br>
-                    <input type="text" id="username" name="usname"><br>
+                    <input type="text" id="username" name="usname" required><br>
                 </div>
                 <div></div>
                     <div class="leftposition top">
                         <label for="password">Password:</label><br>
-                        <input class="passwordplace" type="password" id="password" name="psword">
+                        <input class="passwordplace" type="password" id="password" name="psword" required>
                     </div>
                     <div class="rightposition2items top">
                         <label class="repeatpassword" for="password">Repeat password:</label><br>
-                        <input class="repeatpassword" type="password" id="repeatpassword" name="repeatpsword">
+                        <input class="repeatpassword" type="password" id="repeatpassword" name="repeatpsword" required>
                     </div>
                 <div class="leftposition email">
                     <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email"><br>
+                    <input type="text" id="email" name="email" required><br>
                     <?php
                         if(isset($_GET["error"])){
                             if($_GET["error"]=="1"){
