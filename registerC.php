@@ -8,10 +8,6 @@ $dbname = 'STOP_HATE_CRIMES_DB';
 if (!$conn) {
     $errors="1";
 }
-
-if($_POST['usname']==null or $_POST['psword']==null or $_POST['repeatpsword']==null or $_POST['email']==null){
-    header("Location:./CreateAccount_C.php?error="."5");
-}
 else{
     # data base connection IDK PAL
     $dbconn = @mysqli_select_db($conn, $dbname);
