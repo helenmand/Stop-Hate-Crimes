@@ -24,7 +24,7 @@
             <div class="header-right">
                 <a>
                     <form id="form" action="searchResult.php"> 
-                        <input type="search" id="query" name="q" placeholder="Search...">
+                        <input type="search" id="query" name="q" placeholder="Search..." required>
                         <button type="submit">
                             <img src="images\search-icon.png">
                         </button>

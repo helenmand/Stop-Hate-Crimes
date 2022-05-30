@@ -17,7 +17,7 @@
             <label for="postBody">Comment:</label>
             <div class="post">
                 <form action="commentSubmission.php" method="post" enctype="multipart/form-data">
-                <textarea form_id="postForm" type="text" id="postBody" name="postBody"> </textarea>  
+                <textarea form_id="postForm" type="text" id="postBody" name="postBody" required> </textarea>  
             </div>
             <input type="submit" value="Submit" id="formSubmitButton">
         </form>
