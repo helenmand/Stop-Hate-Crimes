@@ -116,7 +116,7 @@
                 }
 
             } else if(strcmp($pvbcontent, "Articles") == 0) {
-                $sqlQuery = "SELECT * FROM articles WHERE (USERNAME=\"".$_GET["user"]."\") ORDER BY DESC articles.date LIMIT 10";
+                $sqlQuery = "SELECT * FROM articles WHERE (USERNAME=\"".$_GET["user"]."\") ORDER BY articles.date DESC LIMIT 10";
                 $results = mysqli_query($conn, $sqlQuery);
                 while($row = mysqli_fetch_array($results)) {
                     $usertext = $row["USERNAME"];
@@ -127,9 +127,9 @@
                 }
             } else if(strcmp($pvbcontent, "Complaints") == 0) {
                 if(strcmp($pvbregion, "Everywhere") == 0) {
-                    $sqlQuery = "SELECT * FROM complaints WHERE (USERNAME=\"".$_GET["user"]."\") ORDER BY DESC complaints.date LIMIT 10"; 
+                    $sqlQuery = "SELECT * FROM complaints WHERE (USERNAME=\"".$_GET["user"]."\") ORDER BY complaints.date DESC LIMIT 10"; 
                 } else {
-                    $sqlQuery = "SELECT * FROM complaints WHERE region LIKE \"".$pvbregion."\" AND (USERNAME=\"".$_GET["user"]."\")  ORDER BY DESC complaints.date LIMIT 10";
+                    $sqlQuery = "SELECT * FROM complaints WHERE region LIKE \"".$pvbregion."\" AND (USERNAME=\"".$_GET["user"]."\")  ORDER BY complaints.date DESC LIMIT 10";
                 }
                 
                 $results = mysqli_query($conn, $sqlQuery);
