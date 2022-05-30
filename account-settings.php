@@ -57,7 +57,10 @@
                 <div class="grid-item-right">
                         <label for="lname">Email:</label><br>
                         <?php
-                            echo "<input type='text' id='email' name='email' value='".$usersRes['EMAIL']."'>";
+                            echo "<input type='text' id='email' name='email' value='".$usersRes['EMAIL']."'><br>";
+                            if($_GET["error"]=="1"){
+                                echo "<label class='WarningLabel' id='WarningArticle'>Email exists</label>";
+                            }
                         ?>
                 </div>
                 <div class="grid-item-left">

@@ -96,7 +96,6 @@
 					</tr>
 						<?php
 							$sql = "SELECT `ID`, `TITLE`, `USERNAME` FROM `complaints`;";
-							//$result = @mysqli_select_db($conn, $dbname);
 							$results = mysqli_query($conn, $sql);
 							while ($row = mysqli_fetch_array($results)){
 								echo "<tr><td class='namecol'>" . $row["ID"] . "</td><td class='psswdcol'>" . $row["TITLE"] . "</td><td class='emailcol'>" . $row["USERNAME"] . "</td></tr>";

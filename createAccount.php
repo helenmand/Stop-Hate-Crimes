@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CreateAccount.css">
-        <script src="./CreateAccount.js"></script>
         <title>Stop Hate Crimes</title>
 	</head>
 	<body>
@@ -36,7 +35,7 @@
 			</div>
 		</div>
 		<div class="buttonposition">
-			<input class="ButtonCreate" type="submit" id="buttonCreate" value="Create" onclick="checkUsername()">
+			<input class="ButtonCreate" type="submit" id="buttonCreate" value="Create">
 			<?php
 				if(isset($_GET["error"])){
 					echo "<label class='warningLabel' id='warningOutput'>Error</label>";
