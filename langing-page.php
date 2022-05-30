@@ -101,7 +101,7 @@
                         if(strcmp($pvbregion, "Everywhere") == 0) {
                             $sqlQuery = "SELECT * FROM complaints ORDER BY complaints.date DESC LIMIT 3"; 
                         } else {
-                            $sqlQuery = "SELECT * FROM complaints WHERE region LIKE \"".$pvbregion."\"  ORDER BY DESC complaints.date LIMIT 3";
+                            $sqlQuery = "SELECT * FROM complaints WHERE region LIKE \"".$pvbregion."\"  ORDER BY complaints.date DESC LIMIT 3";
                         }
                         
                         $results = mysqli_query($conn, $sqlQuery);
