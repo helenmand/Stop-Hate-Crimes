@@ -58,7 +58,7 @@
                         <label for="lname">Email:</label><br>
                         <?php
                             echo "<input type='text' id='email' name='email' value='".$usersRes['EMAIL']."'><br>";
-                            if($_GET["error"]=="1"){
+                            if(isset($_GET["error"]) and $_GET["error"]=="1"){
                                 echo "<label class='WarningLabel' id='WarningArticle'>Email exists</label>";
                             }
                         ?>
