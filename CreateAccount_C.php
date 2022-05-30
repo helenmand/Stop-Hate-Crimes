@@ -12,34 +12,9 @@
 		<h1 class="headerCreateAccount">Create Account</h1>
 		<div class="gridcontainer">
 			<div class="leftposition">
-
 			<form action="./registerC.php" method="post" enctype="multipart/form-data"> <!-- Added -->
-
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="usname"><br>
-                    <?php
-                     if(isset($_GET["error"])){
-                        if($_GET["error"]=="1"){
-                            $warningmessage="Error with communicate, try later";
-                            }
-                        else{
-                            if($_GET["error"]=="2"){
-                                $warningmessage="Email Id Already Exists";
-                                }
-                            else{
-                                if ($_GET["error"]=="3"){
-                                    $warningmessage="Username Id Already Exists";
-                                    }
-                                else{
-                                    if($_GET["error"]=="4"){
-                                        $warningmessage="Passwords do not match";
-                                        }
-                                    }
-                                }
-                            }
-                        echo "<label class='warninglabel' id='warningUsername'>".$warningmessage."</label>";
-                        }
-                     ?>
                 </div>
                 <div></div>
                     <div class="leftposition top">
@@ -50,14 +25,36 @@
                         <label class="repeatpassword" for="password">Repeat password:</label><br>
                         <input class="repeatpassword" type="password" id="repeatpassword" name="repeatpsword">
                     </div>
-
                 <div class="leftposition email">
                     <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email"><br>
+                    <?php
+                        if(isset($_GET["error"])){
+                            if($_GET["error"]=="1"){
+                                $warningmessage="Error with communicate, try later";
+                                }
+                            else{
+                                if($_GET["error"]=="2"){
+                                    $warningmessage="Email Id Already Exists";
+                                    }
+                                else{
+                                    if ($_GET["error"]=="3"){
+                                        $warningmessage="Username Id Already Exists";
+                                        }
+                                    else{
+                                        if($_GET["error"]=="4"){
+                                            $warningmessage="Passwords do not match";
+                                            }
+                                        }
+                                    }
+                                }
+                            echo "<label class='warninglabel' id='warningUsername'>".$warningmessage."</label>";
+                            }
+                        ?>
                 </div>
             </div>
             <div class="buttonposition">
-                <input class="ButtonCreate" type="submit" id="buttonCreate" value="Create" >
+                    <input class="ButtonCreate" type="submit" id="buttonCreate" value="Create" >
 			</form>
 		</div>
 	</body>

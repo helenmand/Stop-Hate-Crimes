@@ -33,8 +33,10 @@
 }
 
 .warninglabel {
-	font-size:60%;
+	font-size:70%;
+	padding-top:20px;
 	color:red;
+    padding-left:12%;
 	position:absolute;
 }
 
