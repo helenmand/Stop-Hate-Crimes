@@ -16,13 +16,13 @@
                     <label class="labelsposition" for="usname">Username</label>
                 </div>
                 <div class="grid-tem">
-                    <input type="text" id="usname" name="username">
+                    <input type="text" id="usname" name="username" required>
                 </div>
                 <div class="grid-item">
                     <label class="labelsposition" for="psword">Password&nbsp;</label>
                 </div>
                 <div class="grid-item">
-                    <input type="password" id="psword" name="password"><br>
+                    <input type="password" id="psword" name="password" required><br>
                     <?php
                         if(isset($_GET["error"])){
                             echo "<label class='warningLabel' id='warningOutput'>The username or password is incorrect</label>";
