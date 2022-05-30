@@ -3,12 +3,24 @@
 
         include("loginUsersConnection.php");
 
-        $sql="SELECT `EMAIL` FROM `users` WHERE `EMAIL`='".$_POST['email']."';";
+        $makeUpdate=TRUE;
+        $sql="SELECT `EMAIL` FROM `users` WHERE `USERNAME`='".$_COOKIE['user']."';";
 
         $results = mysqli_query($conn, $sql);
         $email = mysqli_fetch_array($results);
 
-        if(!isset($email)){
+        if($email['EMAIL']!=$_POST['email']){
+            $sql="SELECT `EMAIL` FROM `users` WHERE `EMAIL`='".$_POST['email']."';";
+
+            $results = mysqli_query($conn, $sql);
+            $email = mysqli_fetch_array($results);
+
+            if(isset($email)){
+                $makeUpdate=FALSE;
+            }
+        }
+
+        if($makeUpdate){
 
             if($_COOKIE['user_category']=="user"){
 
