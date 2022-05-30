@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="header.css">
-        <script src="header.js"></script>
     </head>
     <body>
         <div class="header">
